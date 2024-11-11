@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import Checkbox from "./components/checkbox";
 import NavBar from "./components/navBar";

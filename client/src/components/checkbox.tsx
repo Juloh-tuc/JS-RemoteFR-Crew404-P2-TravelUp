@@ -34,8 +34,8 @@ const Checkbox: React.FC = () => {
   };
 
   return (
-    <div className="checkbox">
-      <fieldset>
+    <div className="checkbox-container">
+      <fieldset className="checkbox">
         <legend>Quel type de climat préférez-vous ?</legend>
 
         <input

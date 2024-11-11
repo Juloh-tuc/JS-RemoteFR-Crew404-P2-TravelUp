@@ -29,5 +29,14 @@ legend {
 .checkbox {
   background-color: #ffe7de;
   width: 300px;
+  height: 200px;
   color: black;
+}
+
+.checkbox-container {
+  padding-top: 12rem;
+  padding-right: 12rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
