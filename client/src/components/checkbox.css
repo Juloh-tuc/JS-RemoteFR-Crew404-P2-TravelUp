@@ -1,0 +1,33 @@
+:root {
+  scroll-behavior: smooth;
+
+  --first-color: #ffe7de;
+  --title-color: #ffd19a;
+  --text-color: #00a676;
+  --body-color: #a1e8cc;
+  --container-color: black;
+
+  --body-font: "Montserrat", sans-serif;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+}
+
+legend {
+  background-color: #ffe7de;
+  color: #00a676;
+  padding: 3px 6px;
+}
+
+.questions {
+  margin: 0.5rem;
+}
+
+.checkbox {
+  background-color: #ffe7de;
+  width: 300px;
+  color: black;
+}
