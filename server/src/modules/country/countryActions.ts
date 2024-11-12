@@ -22,9 +22,9 @@ const read: RequestHandler = async (req, res, next) => {
     // Fetch a specific item based on the provided ID
     const countryId = Number(req.params.id);
 
-    // Find the item in the database
-    const country = dataAPI.find(
-      (country: { id: number }) => country.id === countryId,
+    // Find the contry in the json object
+    const country = Object.values(dataAPI).find(
+      (country) => country.id === countryId,
     );
 
     // If the country is not found, respond with HTTP 404 (Not Found)

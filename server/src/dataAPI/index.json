@@ -1,171 +1,401 @@
-[
-  {
-    "id": 1,
+{
+  "tanzanie": {
     "name": "Tanzanie",
-    "budget": "élevé",
-    "environnement": "plage, montagne",
-    "climat": "chaud",
-    "activity": "culinaire, randonnées, plage"
+    "id": 1,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["plage", "montagne"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "tanzanie.png",
+      "alt": "Image de la Tanzanie"
+    },
+    "activities": ["culinaire", "randonnées", "plage"]
   },
-  {
-    "id": 2,
+  "islande": {
     "name": "Islande",
-    "budget": "élevé",
-    "environnement": "montagne",
-    "climat": "froid",
-    "activity": "randonnées, détente, visite"
+    "id": 2,
+    "climat": {
+      "type": ["froid"]
+    },
+    "environnement": {
+      "type": ["montagne"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "islande.png",
+      "alt": "Image de l'Islande"
+    },
+    "activities": ["randonnées", "détente", "visite"]
   },
-  {
-    "id": 3,
+  "singapour": {
     "name": "Singapour",
-    "budget": "élevé",
-    "environnement": "ville",
-    "climat": "chaud",
-    "activity": "visite, shopping, culinaire"
+    "id": 3,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["ville"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "singapour.png",
+      "alt": "Image de Singapour"
+    },
+    "activities": ["visite", "shopping", "culinaire"]
   },
-  {
-    "id": 4,
+  "turquie": {
     "name": "Turquie",
-    "budget": "moyen",
-    "environnement": "plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, détente, shopping, visite"
+    "id": 4,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["plage", "ville"]
+    },
+    "budget": {
+      "type": ["moyen"]
+    },
+    "image": {
+      "href": "turquie.png",
+      "alt": "Image de la Turquie"
+    },
+    "activities": ["culinaire", "détente", "shopping", "visite"]
   },
-  {
-    "id": 5,
+  "canada": {
     "name": "Canada",
-    "budget": "élevé",
-    "environnement": "campagne, montagne, ville",
-    "climat": "froid, chaud",
-    "activity": "détente, randonnées, visite"
+    "id": 5,
+    "climat": {
+      "type": ["froid", "chaud"]
+    },
+    "environnement": {
+      "type": ["campagne", "montagne", "ville"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "canada.png",
+      "alt": "Image du Canada"
+    },
+    "activities": ["détente", "randonnées", "visite"]
   },
-  {
-    "id": 6,
+  "nouvelle-zelande": {
     "name": "Nouvelle-Zélande",
-    "budget": "élevé",
-    "environnement": "montagne, campagne, plage, ville",
-    "climat": "tempéré",
-    "activity": "détente, randonnées, visite"
+    "id": 6,
+    "climat": {
+      "type": ["tempéré"]
+    },
+    "environnement": {
+      "type": ["montagne", "campagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "nouvelle-zelande.png",
+      "alt": "Image de la Nouvelle-Zélande"
+    },
+    "activities": ["détente", "randonnées", "visite"]
   },
-  {
-    "id": 7,
+  "suisse": {
     "name": "Suisse",
-    "budget": "moyen",
-    "environnement": "montagne, ville",
-    "climat": "tempéré",
-    "activity": "culinaire, détente, randonnées, shopping"
+    "id": 7,
+    "climat": {
+      "type": ["tempéré"]
+    },
+    "environnement": {
+      "type": ["montagne", "ville"]
+    },
+    "budget": {
+      "type": ["moyen"]
+    },
+    "image": {
+      "href": "suisse.png",
+      "alt": "Image de la Suisse"
+    },
+    "activities": ["culinaire", "détente", "randonnées", "shopping"]
   },
-  {
-    "id": 8,
+  "pays-bas": {
     "name": "Pays-Bas",
-    "budget": "moyen",
-    "environnement": "campagne, ville",
-    "climat": "tempéré",
-    "activity": "fête, randonnées, shopping"
+    "id": 8,
+    "climat": {
+      "type": ["tempéré"]
+    },
+    "environnement": {
+      "type": ["campagne", "ville"]
+    },
+    "budget": {
+      "type": ["moyen"]
+    },
+    "image": {
+      "href": "pays-bas.png",
+      "alt": "Image des Pays-Bas"
+    },
+    "activities": ["fête", "randonnées", "shopping"]
   },
-  {
-    "id": 9,
+  "italie": {
     "name": "Italie",
-    "budget": "petit",
-    "environnement": "campagne, montagne, plage, ville",
-    "climat": "tempéré",
-    "activity": "culinaire, fête, plage, randonnées, shopping, visite"
+    "id": 9,
+    "climat": {
+      "type": ["tempéré"]
+    },
+    "environnement": {
+      "type": ["campagne", "montagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["petit"]
+    },
+    "image": {
+      "href": "italie.png",
+      "alt": "Image de l'Italie"
+    },
+    "activities": ["culinaire", "fête", "randonnées", "shopping", "visite"]
   },
-  {
-    "id": 10,
+  "portugal": {
     "name": "Portugal",
-    "budget": "petit",
-    "environnement": "campagne, montagne, plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, fête, plage, randonnées, shopping, visite"
+    "id": 10,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["campagne", "montagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["petit"]
+    },
+    "image": {
+      "href": "portugal.png",
+      "alt": "Image du Portugal"
+    },
+    "activities": [
+      "culinaire",
+      "fête",
+      "plage",
+      "randonnées",
+      "shopping",
+      "visite"
+    ]
   },
-  {
-    "id": 11,
+  "royaume-uni": {
     "name": "Royaume-Uni",
-    "budget": "élevé",
-    "environnement": "campagne, ville",
-    "climat": "froid",
-    "activity": "fête, randonnées, shopping, visite"
+    "id": 11,
+    "climat": {
+      "type": ["froid"]
+    },
+    "environnement": {
+      "type": ["campagne", "ville"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "royaume-uni.png",
+      "alt": "Image du Royaume-Uni"
+    },
+    "activities": ["fête", "randonnées", "shopping", "visite"]
   },
-  {
-    "id": 12,
+  "inde": {
     "name": "Inde",
-    "budget": "moyen",
-    "environnement": "campagne, plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, détente, randonnées, visite"
+    "id": 12,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["campagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["moyen"]
+    },
+    "image": {
+      "href": "inde.png",
+      "alt": "Image de l'Inde"
+    },
+    "activities": ["culinaire", "détente", "randonnées", "visite"]
   },
-  {
-    "id": 13,
+  "allemagne": {
     "name": "Allemagne",
-    "budget": "petit",
-    "environnement": "campagne, montagne, ville",
-    "climat": "tempéré",
-    "activity": "culinaire, fête, randonnées, visite"
+    "id": 13,
+    "climat": {
+      "type": ["tempéré"]
+    },
+    "environnement": {
+      "type": ["campagne", "montagne", "ville"]
+    },
+    "budget": {
+      "type": ["petit"]
+    },
+    "image": {
+      "href": "allemagne.png",
+      "alt": "Image de l'Allemagne"
+    },
+    "activities": ["culinaire", "fête", "randonnées", "visite"]
   },
-  {
-    "id": 14,
+  "belgique": {
     "name": "Belgique",
-    "budget": "petit",
-    "environnement": "campagne, plage, ville",
-    "climat": "tempéré",
-    "activity": "culinaire, fête, randonnées, visite, shopping"
+    "id": 14,
+    "climat": {
+      "type": ["tempéré"]
+    },
+    "environnement": {
+      "type": ["campagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["petit"]
+    },
+    "image": {
+      "href": "belgique.png",
+      "alt": "Image de la Belgique"
+    },
+    "activities": ["culinaire", "fête", "randonnées", "visite", "shopping"]
   },
-  {
-    "id": 15,
+  "benin": {
     "name": "Benin",
-    "budget": "moyen",
-    "environnement": "plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, visite"
+    "id": 15,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["plage", "ville"]
+    },
+    "budget": {
+      "type": ["moyen"]
+    },
+    "image": {
+      "href": "benin.png",
+      "alt": "Image du Benin"
+    },
+    "activities": ["culinaire", "visite"]
   },
-  {
-    "id": 17,
+  "togo": {
     "name": "Togo",
-    "budget": "moyen",
-    "environnement": "montagne, plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, randonnées, visite"
+    "id": 17,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["montagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["moyen"]
+    },
+    "image": {
+      "href": "togo.png",
+      "alt": "Image du Togo"
+    },
+    "activities": ["culinaire", "randonnées", "visite"]
   },
-  {
-    "id": 18,
+  "espagne": {
     "name": "Espagne",
-    "budget": "petit",
-    "environnement": "campagne, montagne, plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, fête, plage, randonnées, shopping, visite"
+    "id": 18,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["campagne", "montagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["petit"]
+    },
+    "image": {
+      "href": "espagne.png",
+      "alt": "Image de l'Espagne"
+    },
+    "activities": [
+      "culinaire",
+      "fête",
+      "plage",
+      "randonnées",
+      "shopping",
+      "visite"
+    ]
   },
-  {
-    "id": 19,
+  "bali": {
     "name": "Bali",
-    "budget": "élevé",
-    "environnement": "campagne, montagne, plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, randonnées, plage, visite"
+    "id": 19,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["campagne", "montagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "bali.png",
+      "alt": "Image de Bali"
+    },
+    "activities": ["culinaire", "randonnées", "plage", "visite"]
   },
-  {
-    "id": 20,
+  "japon": {
     "name": "Japon",
-    "budget": "élevé",
-    "environnement": "campagne, montagne, plage, ville",
-    "climat": "tempéré",
-    "activity": "culinaire, détente, fête, randonnées, shopping, visite"
+    "id": 20,
+    "climat": {
+      "type": ["tempéré"]
+    },
+    "environnement": {
+      "type": ["campagne", "montagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "japon.png",
+      "alt": "Image du Japon"
+    },
+    "activities": [
+      "culinaire",
+      "détente",
+      "fête",
+      "randonnées",
+      "shopping",
+      "visite"
+    ]
   },
-
-  {
-    "id": 21,
+  "la-reunion": {
     "name": "La Réunion",
-    "budget": "moyen",
-    "environnement": "montagne, plage, ville",
-    "climat": "chaud",
-    "activity": "culinaire, plage, randonnées, visite"
+    "id": 21,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["montagne", "plage", "ville"]
+    },
+    "budget": {
+      "type": ["moyen"]
+    },
+    "image": {
+      "href": "la-reunion.png",
+      "alt": "Image de La Réunion"
+    },
+    "activities": ["culinaire", "plage", "randonnées", "visite"]
   },
-  {
-    "id": 22,
+  "polynesie-francaise": {
     "name": "Polynésie-française",
-    "budget": "élevé",
-    "environnement": "montagne, plage",
-    "climat": "chaud",
-    "activity": "culinaire, plage, randonnées"
+    "id": 22,
+    "climat": {
+      "type": ["chaud"]
+    },
+    "environnement": {
+      "type": ["montagne", "plage"]
+    },
+    "budget": {
+      "type": ["élevé"]
+    },
+    "image": {
+      "href": "polynesie-francaise.png",
+      "alt": "Image de la Polynésie française"
+    },
+    "activities": ["culinaire", "plage", "randonnées"]
   }
-]
+}
