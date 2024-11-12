@@ -3,6 +3,7 @@ import "../components/NavBar.css";
 
 function NavBar() {
   const [isExpanded, setIsExpanded] = useState(false);
+  
 
   return (
     <>
