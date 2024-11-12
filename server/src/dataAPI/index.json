@@ -1,0 +1,171 @@
+[
+  {
+    "id": 1,
+    "name": "Tanzanie",
+    "budget": "élevé",
+    "environnement": "plage, montagne",
+    "climat": "chaud",
+    "activity": "culinaire, randonnées, plage"
+  },
+  {
+    "id": 2,
+    "name": "Islande",
+    "budget": "élevé",
+    "environnement": "montagne",
+    "climat": "froid",
+    "activity": "randonnées, détente, visite"
+  },
+  {
+    "id": 3,
+    "name": "Singapour",
+    "budget": "élevé",
+    "environnement": "ville",
+    "climat": "chaud",
+    "activity": "visite, shopping, culinaire"
+  },
+  {
+    "id": 4,
+    "name": "Turquie",
+    "budget": "moyen",
+    "environnement": "plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, détente, shopping, visite"
+  },
+  {
+    "id": 5,
+    "name": "Canada",
+    "budget": "élevé",
+    "environnement": "campagne, montagne, ville",
+    "climat": "froid, chaud",
+    "activity": "détente, randonnées, visite"
+  },
+  {
+    "id": 6,
+    "name": "Nouvelle-Zélande",
+    "budget": "élevé",
+    "environnement": "montagne, campagne, plage, ville",
+    "climat": "tempéré",
+    "activity": "détente, randonnées, visite"
+  },
+  {
+    "id": 7,
+    "name": "Suisse",
+    "budget": "moyen",
+    "environnement": "montagne, ville",
+    "climat": "tempéré",
+    "activity": "culinaire, détente, randonnées, shopping"
+  },
+  {
+    "id": 8,
+    "name": "Pays-Bas",
+    "budget": "moyen",
+    "environnement": "campagne, ville",
+    "climat": "tempéré",
+    "activity": "fête, randonnées, shopping"
+  },
+  {
+    "id": 9,
+    "name": "Italie",
+    "budget": "petit",
+    "environnement": "campagne, montagne, plage, ville",
+    "climat": "tempéré",
+    "activity": "culinaire, fête, plage, randonnées, shopping, visite"
+  },
+  {
+    "id": 10,
+    "name": "Portugal",
+    "budget": "petit",
+    "environnement": "campagne, montagne, plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, fête, plage, randonnées, shopping, visite"
+  },
+  {
+    "id": 11,
+    "name": "Royaume-Uni",
+    "budget": "élevé",
+    "environnement": "campagne, ville",
+    "climat": "froid",
+    "activity": "fête, randonnées, shopping, visite"
+  },
+  {
+    "id": 12,
+    "name": "Inde",
+    "budget": "moyen",
+    "environnement": "campagne, plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, détente, randonnées, visite"
+  },
+  {
+    "id": 13,
+    "name": "Allemagne",
+    "budget": "petit",
+    "environnement": "campagne, montagne, ville",
+    "climat": "tempéré",
+    "activity": "culinaire, fête, randonnées, visite"
+  },
+  {
+    "id": 14,
+    "name": "Belgique",
+    "budget": "petit",
+    "environnement": "campagne, plage, ville",
+    "climat": "tempéré",
+    "activity": "culinaire, fête, randonnées, visite, shopping"
+  },
+  {
+    "id": 15,
+    "name": "Benin",
+    "budget": "moyen",
+    "environnement": "plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, visite"
+  },
+  {
+    "id": 17,
+    "name": "Togo",
+    "budget": "moyen",
+    "environnement": "montagne, plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, randonnées, visite"
+  },
+  {
+    "id": 18,
+    "name": "Espagne",
+    "budget": "petit",
+    "environnement": "campagne, montagne, plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, fête, plage, randonnées, shopping, visite"
+  },
+  {
+    "id": 19,
+    "name": "Bali",
+    "budget": "élevé",
+    "environnement": "campagne, montagne, plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, randonnées, plage, visite"
+  },
+  {
+    "id": 20,
+    "name": "Japon",
+    "budget": "élevé",
+    "environnement": "campagne, montagne, plage, ville",
+    "climat": "tempéré",
+    "activity": "culinaire, détente, fête, randonnées, shopping, visite"
+  },
+
+  {
+    "id": 21,
+    "name": "La Réunion",
+    "budget": "moyen",
+    "environnement": "montagne, plage, ville",
+    "climat": "chaud",
+    "activity": "culinaire, plage, randonnées, visite"
+  },
+  {
+    "id": 22,
+    "name": "Polynésie-française",
+    "budget": "élevé",
+    "environnement": "montagne, plage",
+    "climat": "chaud",
+    "activity": "culinaire, plage, randonnées"
+  }
+]
