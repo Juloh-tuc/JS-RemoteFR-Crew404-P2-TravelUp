@@ -16,27 +16,44 @@
   --smaller-font-size: 0.813rem;
 }
 
-legend {
-  background-color: #ffe7de;
-  color: #00a676;
-  padding: 3px 6px;
+h2 {
+  margin: 1.5rem;
+  color: #000000;
+  font-size: 130%;
+  text-align: center;
 }
 
 .questions {
-  margin: 0.5rem;
+  margin-left: 51%;
+  margin-right: 50%;
+  
 }
 
-.checkbox {
-  background-color: #ffe7de;
-  width: 300px;
-  height: 200px;
-  color: black;
+.chaud,
+.froid,
+.tempéré {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
 }
 
 .checkbox-container {
-  padding-top: 12rem;
-  padding-right: 12rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  padding-top: 10rem;
   width: 100%;
 }
+
+fieldset {
+  border: none;
+  background-color: #ffe7de;
+  width: 450px;
+  height: 550px;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10%;
+}
+

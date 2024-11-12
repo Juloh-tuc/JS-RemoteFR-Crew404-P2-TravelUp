@@ -35,9 +35,8 @@ const Checkbox: React.FC = () => {
 
   return (
     <div className="checkbox-container">
-      <fieldset className="checkbox">
-        <legend>Quel type de climat préférez-vous ?</legend>
-
+      <fieldset>
+        <h2>Quel type de climat préférez-vous ?</h2>
         <input
           className="questions"
           type="checkbox"
@@ -46,9 +45,14 @@ const Checkbox: React.FC = () => {
           checked={selectedOptions.chaud}
           onChange={handleChange}
         />
-        <label htmlFor="Chaud">🌡️ Chaud</label>
+        <label htmlFor="Chaud">
+          <img
+            className="chaud"
+            src="../public/img/chaud.png"
+            alt="Climat chaud"
+          />
+        </label>
         <br />
-
         <input
           className="questions"
           type="checkbox"
@@ -57,9 +61,14 @@ const Checkbox: React.FC = () => {
           checked={selectedOptions.froid}
           onChange={handleChange}
         />
-        <label htmlFor="Froid">❄️ Froid</label>
+        <label htmlFor="Froid">
+          <img
+            className="froid"
+            src="../public/img/du-froid.png"
+            alt="Climat froid"
+          />{" "}
+        </label>
         <br />
-
         <input
           className="questions"
           type="checkbox"
@@ -68,7 +77,13 @@ const Checkbox: React.FC = () => {
           checked={selectedOptions.tempere}
           onChange={handleChange}
         />
-        <label htmlFor="Tempéré">🌤️ Tempéré</label>
+        <label htmlFor="Tempéré">
+          <img
+            className="tempéré"
+            src="../public/img/temperature.png"
+            alt="Climat Tempéré"
+          />
+        </label>
       </fieldset>
     </div>
   );
