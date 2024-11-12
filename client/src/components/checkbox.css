@@ -18,7 +18,7 @@
 
 h2 {
   margin: 1.5rem;
-  color: #000000;
+  color: #00a676;
   font-size: 130%;
   text-align: center;
 }
@@ -26,7 +26,6 @@ h2 {
 .questions {
   margin-left: 51%;
   margin-right: 50%;
-  
 }
 
 .chaud,
@@ -35,7 +34,6 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: 20%;
 }
@@ -56,4 +54,3 @@ fieldset {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10%;
 }
-
