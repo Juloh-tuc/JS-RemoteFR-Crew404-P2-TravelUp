@@ -48,7 +48,7 @@ const QuestionsForm: React.FC = () => {
     if (currentQuestionIndex < questionKeys.length - 1) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
-      alert("All questions completed!"); // Replace this with your own submit logic
+      alert("All questions completed!");
     }
   };
 
