@@ -16,6 +16,14 @@
   --smaller-font-size: 0.813rem;
 }
 
+@keyframes tilt-shaking {
+  0% { transform: rotate(15deg); }
+  25% { transform: rotate(20deg); }
+  50% { transform: rotate(0.5eg); }
+  75% { transform: rotate(-25deg); }
+  100% { transform: rotate(15deg); }
+}
+
 h2 {
   margin: 1.5rem;
   color: #00a676;
@@ -24,13 +32,33 @@ h2 {
 }
 
 .questions {
+  display: none;
   margin-left: 51%;
   margin-right: 50%;
 }
 
+label {
+  cursor: pointer;
+  display: inline-table;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  padding: 5%;
+}
+
+input[type="checkbox"]:checked + label {
+  animation: tilt-shaking 0.4s ease-in-out;
+  transform: scale(1); 
+}
+
 .chaud,
-.froid,
-.tempéré {
+.tempéré,
+.froid {
   margin-left: auto;
   margin-right: auto;
   display: flex;

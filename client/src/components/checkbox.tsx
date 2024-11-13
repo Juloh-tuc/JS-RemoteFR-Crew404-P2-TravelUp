@@ -46,11 +46,7 @@ const Checkbox: React.FC = () => {
           onChange={handleChange}
         />
         <label htmlFor="Chaud">
-          <img
-            className="chaud"
-            src="../public/img/chaud.png"
-            alt="Climat chaud"
-          />
+          <img className="chaud" src="./img/chaud.png" alt="Climat chaud" />
         </label>
         <br />
         <input
@@ -62,11 +58,7 @@ const Checkbox: React.FC = () => {
           onChange={handleChange}
         />
         <label htmlFor="Froid">
-          <img
-            className="froid"
-            src="../public/img/du-froid.png"
-            alt="Climat froid"
-          />{" "}
+          <img className="froid" src="./img/du-froid.png" alt="Climat froid" />{" "}
         </label>
         <br />
         <input
@@ -80,7 +72,7 @@ const Checkbox: React.FC = () => {
         <label htmlFor="Tempéré">
           <img
             className="tempéré"
-            src="../public/img/temperature.png"
+            src="./img/temperature.png"
             alt="Climat Tempéré"
           />
         </label>
