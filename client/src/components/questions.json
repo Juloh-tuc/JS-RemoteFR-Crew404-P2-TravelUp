@@ -1,0 +1,127 @@
+{
+  "climate": [
+    {
+      "img": "climate-warm.png",
+      "checked": false,
+      "label": "Chaud"
+    },
+    {
+      "img": "climate-cold.png",
+      "checked": false,
+      "label": "Froid"
+    },
+    {
+      "img": "climate-temperate.png",
+      "checked": false,
+      "label": "Tempéré"
+    }
+  ],
+  "budget": [
+    {
+      "img": "budget-high.png",
+      "checked": false,
+      "label": "Élevé"
+    },
+    {
+      "img": "budget-medium.png",
+      "checked": false,
+      "label": "Moyen"
+    },
+    {
+      "img": "budget-low.png",
+      "checked": false,
+      "label": "Petit"
+    }
+  ],
+  "activity": [
+    {
+      "img": "beach.png",
+      "checked": false,
+      "label": "Plage"
+    },
+    {
+      "img": "fête.png",
+      "checked": false,
+      "label": "Fête"
+    },
+    {
+      "img": "shopping.png",
+      "checked": false,
+      "label": "Shopping"
+    },
+    {
+      "img": "randonnées.png",
+      "checked": false,
+      "label": "Randonnées"
+    },
+    {
+      "img": "visite.png",
+      "checked": false,
+      "label": "Visite"
+    },
+    {
+      "img": "culinaire.png",
+      "checked": false,
+      "label": "Culinaire"
+    },
+    {
+      "img": "détente.png",
+      "checked": false,
+      "label": "Détente"
+    }
+  ],
+  "environnement": [
+    {
+      "img": "plage.png",
+      "checked": false,
+      "label": "Plage"
+    },
+    {
+      "img": "montagne.png",
+      "checked": false,
+      "label": "Montagne"
+    },
+    {
+      "img": "campagne.png",
+      "checked": false,
+      "label": "Campagne"
+    },
+    {
+      "img": "ville.png",
+      "checked": false,
+      "label": "Ville"
+    }
+  ],
+  "people": [
+    {
+      "img": "seul.png",
+      "checked": false
+    },
+    {
+      "img": "famille.png",
+      "checked": false
+    },
+    {
+      "img": "couple.png",
+      "checked": false
+    },
+    {
+      "img": "amis.png",
+      "checked": false
+    }
+  ],
+  "duration": [
+    {
+      "img": "week.png",
+      "checked": false
+    },
+    {
+      "img": "weekend.png",
+      "checked": false
+    },
+    {
+      "img": "weeks.png",
+      "checked": false
+    }
+  ]
+}

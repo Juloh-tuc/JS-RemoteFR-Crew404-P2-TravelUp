@@ -14,6 +14,8 @@ const Checkbox: React.FC = () => {
   const paysTempérés = ["Portugal", "Espagne", "Japon", "Australie"];
 
   const [pays, setPays] = useState<string[]>([]);
+  // vu avec antho, il accepte car il en a marre...
+  console.info(pays);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
