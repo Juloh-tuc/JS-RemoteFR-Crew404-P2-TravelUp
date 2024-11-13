@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <header className="navbar">
       <img
-        src="../public/img/logo.png"
+        src="./img/logo.png"
         className="logo"
         alt="une terre avec un pins rouge au couleur de notre charte"
       />

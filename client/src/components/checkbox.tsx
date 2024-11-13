@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import "./checkbox.css";
 
 const Checkbox: React.FC = () => {
@@ -58,7 +59,11 @@ const Checkbox: React.FC = () => {
           onChange={handleChange}
         />
         <label htmlFor="Froid">
-          <img className="froid" src="./img/du-froid.png" alt="Climat froid" />{" "}
+          <img
+            className="froid"
+            src="./img/du-froid.png"
+            alt="Climat froid"
+          />{" "}
         </label>
         <br />
         <input

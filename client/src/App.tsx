@@ -1,6 +1,6 @@
 import "./App.css";
-import Checkbox from "./components/checkbox";
-import NavBar from "./components/navBar";
+import Checkbox from "./components/Checkbox";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
