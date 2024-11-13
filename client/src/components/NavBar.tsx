@@ -3,7 +3,6 @@ import "../components/NavBar.css";
 
 function NavBar() {
   const [isExpanded, setIsExpanded] = useState(false);
-  
 
   return (
     <>
@@ -22,19 +21,16 @@ function NavBar() {
           <li>
             <a href="#about">
               <img src="/img/about.png" alt="About" />
-			  
             </a>
           </li>
           <li>
             <a href="#home">
               <img src="/img/home.png" alt="Home" />
-			  
             </a>
           </li>
           <li>
             <a href="#contact">
               <img src="/img/contact.png" alt="Contact" />
-			  
             </a>
           </li>
         </ul>
@@ -44,4 +40,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
