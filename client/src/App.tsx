@@ -1,19 +1,20 @@
+import Checkbox from "./components/Checkbox";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import "./App.css";
 import QuestionsForm from "./components/QuestionsForm";
+import "./App.css";
 
 function App() {
   return (
-questionsJS
     <div className="App">
       <h1>Questionnaire</h1>
       <QuestionsForm />
 
-    <div>
-      <NavBar />
-      <Footer />
-dev
+      <div>
+        <NavBar />
+        <Checkbox />
+        <Footer />
+      </div>
     </div>
   );
 }
