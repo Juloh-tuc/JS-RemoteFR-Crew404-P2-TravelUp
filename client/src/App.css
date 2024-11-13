@@ -1,7 +1,7 @@
- navBar
-.item {
+.navBar .item {
   width: 20px;
   height: 20px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -29,5 +29,4 @@ footer {
 .creators {
   text-align: center;
   margin-bottom: 0px;
-
 }
