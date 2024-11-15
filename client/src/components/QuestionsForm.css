@@ -93,9 +93,12 @@ label {
 
 input[type="checkbox"]:checked + label {
   animation: tilt-shaking 0.4s ease-in-out;
-  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 20%;
 }
+
 input[type="checkbox"]:not(:checked) + label {
+  border-radius: 20%;
   animation: notilt-shaking 0.4s ease-in-out;
 }
 input {
@@ -126,7 +129,7 @@ input {
 .validate {
   grid-column: span 3;
   padding: 10px 20px;
-  background-color: var(--text-color);
+  background-color: #00a676;
   color: white;
   border: none;
   border-radius: 5px;
@@ -135,5 +138,9 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
+  width: 30%;
+}
+
+.validate:hover {
+  background-color: #387462;
 }

@@ -51,7 +51,7 @@ const QuestionsForm: React.FC = () => {
     [key: string]: string[];
   }>({});
   const [isComplete, setIsComplete] = useState(false);
-  const [_, setCountries] = useState<Country[]>([]);
+  const [, setCountries] = useState<Country[]>([]);
   const [matchingCountries, setMatchingCountries] = useState<Country[]>([]);
 
   const currentQuestionKey = questionKeys[currentQuestionIndex];
@@ -72,7 +72,7 @@ const QuestionsForm: React.FC = () => {
 
             if (
               selectedAnswers.climate?.some((climate) =>
-                country.climat.type.includes(climate),
+                country.climat.type.includes(climate)
               )
             ) {
               matchScore++;
@@ -80,7 +80,7 @@ const QuestionsForm: React.FC = () => {
 
             if (
               selectedAnswers.budget?.some((budget) =>
-                country.budget.type.includes(budget),
+                country.budget.type.includes(budget)
               )
             ) {
               matchScore++;
@@ -88,7 +88,7 @@ const QuestionsForm: React.FC = () => {
 
             if (
               selectedAnswers.activity?.some((activity) =>
-                country.activities.includes(activity),
+                country.activities.includes(activity)
               )
             ) {
               matchScore++;
@@ -96,7 +96,7 @@ const QuestionsForm: React.FC = () => {
 
             if (
               selectedAnswers.environnement?.some((env) =>
-                country.environnement.type.includes(env),
+                country.environnement.type.includes(env)
               )
             ) {
               matchScore++;
@@ -187,7 +187,7 @@ const QuestionsForm: React.FC = () => {
                       name={currentQuestionKey}
                       checked={
                         selectedAnswers[currentQuestionKey]?.includes(
-                          option.label,
+                          option.label
                         ) || false
                       }
                       onChange={() =>
@@ -206,8 +206,8 @@ const QuestionsForm: React.FC = () => {
                 ))}
               </div>
               <button
-                type="button"
                 className="validate"
+                type="button"
                 onClick={handleNextQuestion}
                 style={{ marginTop: "20px" }}
               >
