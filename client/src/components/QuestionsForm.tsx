@@ -51,7 +51,7 @@ const QuestionsForm: React.FC = () => {
     [key: string]: string[];
   }>({});
   const [isComplete, setIsComplete] = useState(false);
-  const [countries, setCountries] = useState<Country[]>([]);
+  const [_, setCountries] = useState<Country[]>([]);
   const [matchingCountries, setMatchingCountries] = useState<Country[]>([]);
 
   const currentQuestionKey = questionKeys[currentQuestionIndex];
