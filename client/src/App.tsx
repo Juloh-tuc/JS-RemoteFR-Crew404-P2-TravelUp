@@ -1,4 +1,3 @@
-import Checkbox from "./components/Checkbox";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import QuestionsForm from "./components/QuestionsForm";
@@ -12,7 +11,6 @@ function App() {
 
       <div>
         <NavBar />
-        <Checkbox />
         <Footer />
       </div>
     </div>

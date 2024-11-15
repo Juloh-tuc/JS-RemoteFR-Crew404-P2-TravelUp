@@ -1,0 +1,139 @@
+:root {
+  scroll-behavior: smooth;
+  --first-color: #ffe7de;
+  --title-color: #ffd19a;
+  --text-color: #00a676;
+  --body-color: #a1e8cc;
+  --container-color: black;
+
+  --body-font: "Montserrat", sans-serif;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes notilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+h2 {
+  margin: 1.5rem;
+  color: #00a676;
+  font-size: 130%;
+  text-align: center;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  justify-items: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+fieldset {
+  border: none;
+  background-color: var(--first-color);
+  width: 100%;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all 1s;
+  padding: 10px;
+}
+
+input[type="checkbox"]:checked + label {
+  animation: tilt-shaking 0.4s ease-in-out;
+  background-color: red;
+}
+input[type="checkbox"]:not(:checked) + label {
+  animation: notilt-shaking 0.4s ease-in-out;
+}
+input {
+  display: none;
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+  width: 100%;
+}
+
+.option-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.option-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.validate {
+  grid-column: span 3;
+  padding: 10px 20px;
+  background-color: var(--text-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
