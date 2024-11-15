@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.footer_title {
+  text-align: center;
+}
+.social_icon {
+  width: 20px;
+  height: 20px;
+}
+
+footer {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9px);
+  margin-top: 10px;
+}
+
+.container_icon {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.creators {
+  text-align: center;
+  margin-bottom: 0px;
+}
