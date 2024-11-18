@@ -18,7 +18,7 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contact/:id", // Dynamic parameter for Contact page
+        path: "/contact/:id",
         element: <Contact />,
       },
     ],
