@@ -181,7 +181,7 @@ const QuestionsForm: React.FC = () => {
                     className="option-wrapper"
                   >
                     <input
-                      className="questions"
+                      className="questions show"
                       type="checkbox"
                       id={option.label}
                       name={currentQuestionKey}
@@ -196,7 +196,7 @@ const QuestionsForm: React.FC = () => {
                     />
                     <label htmlFor={option.label} className="option-label">
                       <img
-                        src={`./public/img/${option.img}`}
+                        src={`./img/${option.img}`}
                         alt={option.label}
                         className="option-image"
                       />

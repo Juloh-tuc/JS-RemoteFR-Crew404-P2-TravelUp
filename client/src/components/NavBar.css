@@ -105,6 +105,8 @@ main {
 
 .navbar-links a:hover {
   opacity: 0.8;
+  background-color: var(--fourth-color);
+  border-radius: 5%;
 }
 
 .navbar.expanded .navbar-links {
@@ -186,5 +188,6 @@ main {
 
   .navbar-links a {
     font-size: 14px;
+    padding-left: 1rem;
   }
 }

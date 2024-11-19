@@ -8,7 +8,7 @@ function NavBar() {
     <>
       <img
         className="logo"
-        src="./img/logo.png"
+        src="../img/logo.png"
         alt="une terre avec un pins rouge au couleur de notre charte"
       />
 
