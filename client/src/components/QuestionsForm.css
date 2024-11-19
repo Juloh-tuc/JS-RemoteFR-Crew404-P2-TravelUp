@@ -61,6 +61,8 @@ h2 {
 .checkbox-container {
   display: flex;
   justify-content: center;
+  margin-top: 15%;
+  padding-left: 60%;
 }
 
 form {
@@ -139,8 +141,36 @@ input {
   align-items: center;
   justify-content: center;
   width: 30%;
+  background-color: #ffd19a;
+  border: 0 solid #e5e7eb;
+  color: #000000;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.validate:hover {
-  background-color: #387462;
+.button-53:focus {
+  outline: 0;
 }
+
+.validate:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.validate:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
