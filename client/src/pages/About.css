@@ -1,0 +1,29 @@
+:root {
+  scroll-behavior: smooth;
+  --body-font: "Montserrat", sans-serif;
+  --primary-color: #ffe7de;
+  --second-color: #ffd19a;
+  --thtid-color: #00a676;
+  --fourth-color: #a1e8cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffe7de;
+}
+.myabout {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.monlogo {
+  width: 200px;
+  height: 200px;
+}
+
+.first_element {
+  margin: auto;
+  margin-top: 160px;
+}
