@@ -196,7 +196,7 @@ const QuestionsForm: React.FC = () => {
                     />
                     <label htmlFor={option.label} className="option-label">
                       <img
-                        src={`./public/img/${option.img}`}
+                        src={`./img/${option.img}`}
                         alt={option.label}
                         className="option-image"
                       />
