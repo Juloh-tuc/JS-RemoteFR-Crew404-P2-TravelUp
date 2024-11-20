@@ -19,9 +19,12 @@ const browse: RequestHandler = async (req, res, next) => {
 // The R of BREAD - Read operation
 const read: RequestHandler = async (req, res, next) => {
   try {
+    // Fetch a specific item based on the provided ID
+    const countryId = Number(req.params.id);
+
     // Find the contry in the json object
     const country = Object.values(dataAPI).find(
-      (country) => country.id === req.params.id.toUpperCase(),
+      (country) => country.number === countryId,
     );
 
     // If the country is not found, respond with HTTP 404 (Not Found)
