@@ -1,7 +1,8 @@
 {
   "tanzanie": {
     "name": "Tanzanie",
-    "id": 1,
+    "id": "TZ",
+    "number": 1,
     "climat": {
       "type": ["chaud"]
     },
@@ -19,7 +20,8 @@
   },
   "islande": {
     "name": "Islande",
-    "id": 2,
+    "id": "IS",
+    "number": 2,
     "climat": {
       "type": ["froid"]
     },
@@ -37,7 +39,8 @@
   },
   "singapour": {
     "name": "Singapour",
-    "id": 3,
+    "id": "SG",
+    "number": 3,
     "climat": {
       "type": ["chaud"]
     },
@@ -55,7 +58,8 @@
   },
   "turquie": {
     "name": "Turquie",
-    "id": 4,
+    "id": "TR",
+    "number": 4,
     "climat": {
       "type": ["chaud"]
     },
@@ -73,7 +77,8 @@
   },
   "canada": {
     "name": "Canada",
-    "id": 5,
+    "id": "CA",
+    "number": 5,
     "climat": {
       "type": ["froid", "chaud"]
     },
@@ -91,7 +96,8 @@
   },
   "nouvelle-zelande": {
     "name": "Nouvelle-Zélande",
-    "id": 6,
+    "id": "NZ",
+    "number": 6,
     "climat": {
       "type": ["tempéré"]
     },
@@ -109,7 +115,8 @@
   },
   "suisse": {
     "name": "Suisse",
-    "id": 7,
+    "id": "CH",
+    "number": 7,
     "climat": {
       "type": ["tempéré"]
     },
@@ -127,7 +134,8 @@
   },
   "pays-bas": {
     "name": "Pays-Bas",
-    "id": 8,
+    "id": "NL",
+    "number": 8,
     "climat": {
       "type": ["tempéré"]
     },
@@ -145,7 +153,8 @@
   },
   "italie": {
     "name": "Italie",
-    "id": 9,
+    "id": "IT",
+    "number": 9,
     "climat": {
       "type": ["tempéré"]
     },
@@ -163,7 +172,8 @@
   },
   "portugal": {
     "name": "Portugal",
-    "id": 10,
+    "id": "PT",
+    "number": 10,
     "climat": {
       "type": ["chaud"]
     },
@@ -188,7 +198,8 @@
   },
   "royaume-uni": {
     "name": "Royaume-Uni",
-    "id": 11,
+    "id": "GB",
+    "number": 11,
     "climat": {
       "type": ["froid"]
     },
@@ -206,7 +217,8 @@
   },
   "inde": {
     "name": "Inde",
-    "id": 12,
+    "id": "IN",
+    "number": 12,
     "climat": {
       "type": ["chaud"]
     },
@@ -224,7 +236,8 @@
   },
   "allemagne": {
     "name": "Allemagne",
-    "id": 13,
+    "id": "DE",
+    "number": 13,
     "climat": {
       "type": ["tempéré"]
     },
@@ -242,7 +255,8 @@
   },
   "belgique": {
     "name": "Belgique",
-    "id": 14,
+    "id": "BE",
+    "number": 14,
     "climat": {
       "type": ["tempéré"]
     },
@@ -259,8 +273,9 @@
     "activities": ["culinaire", "fête", "randonnées", "visite", "shopping"]
   },
   "benin": {
-    "name": "Benin",
-    "id": 15,
+    "name": "Bénin",
+    "id": "BJ",
+    "number": 15,
     "climat": {
       "type": ["chaud"]
     },
@@ -272,13 +287,14 @@
     },
     "image": {
       "href": "benin.png",
-      "alt": "Image du Benin"
+      "alt": "Image du Bénin"
     },
     "activities": ["culinaire", "visite"]
   },
   "togo": {
     "name": "Togo",
-    "id": 17,
+    "id": "TG",
+    "number": 16,
     "climat": {
       "type": ["chaud"]
     },
@@ -296,7 +312,8 @@
   },
   "espagne": {
     "name": "Espagne",
-    "id": 18,
+    "id": "ES",
+    "number": 17,
     "climat": {
       "type": ["chaud"]
     },
@@ -321,7 +338,8 @@
   },
   "bali": {
     "name": "Bali",
-    "id": 19,
+    "id": "ID",
+    "number": 18,
     "climat": {
       "type": ["chaud"]
     },
@@ -339,7 +357,8 @@
   },
   "japon": {
     "name": "Japon",
-    "id": 20,
+    "id": "JP",
+    "number": 19,
     "climat": {
       "type": ["tempéré"]
     },
@@ -364,7 +383,8 @@
   },
   "la-reunion": {
     "name": "La Réunion",
-    "id": 21,
+    "id": "RE",
+    "number": 20,
     "climat": {
       "type": ["chaud"]
     },
@@ -381,8 +401,9 @@
     "activities": ["culinaire", "plage", "randonnées", "visite"]
   },
   "polynesie-francaise": {
-    "name": "Polynésie-française",
-    "id": 22,
+    "name": "Polynésie Française",
+    "id": "PF",
+    "number": 21,
     "climat": {
       "type": ["chaud"]
     },
@@ -394,7 +415,7 @@
     },
     "image": {
       "href": "polynesie-francaise.png",
-      "alt": "Image de la Polynésie française"
+      "alt": "Image de la Polynésie Française"
     },
     "activities": ["culinaire", "plage", "randonnées"]
   }
