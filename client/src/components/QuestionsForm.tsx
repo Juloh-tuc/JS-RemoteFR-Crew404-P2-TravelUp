@@ -27,12 +27,12 @@ const questionKeys = [
 ] as const;
 
 const questionLabels: { [key: string]: string } = {
-  climate: "Quel climat désirez-vous ?",
-  budget: "Quel budget ?",
-  activity: "Quelles activités ?",
-  environnement: "Quel environnement ?",
-  people: "Combien de personnes ?",
-  duration: "Pour combien de temps ?",
+  climate: "Quel climat préférez-vous ?",
+  budget: "Quel budget avez-vous ?",
+  activity: "Quelles activités auriez-vous envie de faire ?",
+  environnement: "Vous êtes plutôt ?",
+  people: "Vous voyagez ?",
+  duration: "La durée de votre séjour ?",
 };
 
 interface Country {
@@ -51,7 +51,7 @@ const QuestionsForm: React.FC = () => {
     [key: string]: string[];
   }>({});
   const [isComplete, setIsComplete] = useState(false);
-  const [_, setCountries] = useState<Country[]>([]);
+  const [, setCountries] = useState<Country[]>([]);
   const [matchingCountries, setMatchingCountries] = useState<Country[]>([]);
 
   const currentQuestionKey = questionKeys[currentQuestionIndex];
@@ -206,8 +206,8 @@ const QuestionsForm: React.FC = () => {
                 ))}
               </div>
               <button
-                type="button"
                 className="validate"
+                type="button"
                 onClick={handleNextQuestion}
                 style={{ marginTop: "20px" }}
               >

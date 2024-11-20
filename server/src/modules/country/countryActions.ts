@@ -24,7 +24,7 @@ const read: RequestHandler = async (req, res, next) => {
 
     // Find the contry in the json object
     const country = Object.values(dataAPI).find(
-      (country) => country.id === countryId,
+      (country) => country.number === countryId,
     );
 
     // If the country is not found, respond with HTTP 404 (Not Found)

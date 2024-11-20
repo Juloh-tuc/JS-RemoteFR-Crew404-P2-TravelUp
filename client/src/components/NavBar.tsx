@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "../components/NavBar.css";
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 function NavBar() {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <>
       <img
         className="logo"
-        src="../img/logo.png"
+        src={logo}
         alt="une terre avec un pins rouge au couleur de notre charte"
       />
 
@@ -28,6 +28,10 @@ function NavBar() {
 
           <Link to="/contact/123" type="link">
             Contact
+          </Link>
+
+          <Link to="/quiz" type="link">
+            Quiz
           </Link>
         </ul>
       </nav>
