@@ -1,9 +1,4 @@
-
-
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-
-
 
 import ReactDOM from "react-dom/client";
 
@@ -14,7 +9,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 
 const router = createBrowserRouter([
-
+  {
     element: <App />,
     children: [
       {
@@ -34,14 +29,11 @@ const router = createBrowserRouter([
         element: <QuestionsForm />,
       },
     ],
-
   },
 ]);
 
 const rootElement = document.getElementById("root");
 
-
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(<RouterProvider router={router} />);
 }
-
