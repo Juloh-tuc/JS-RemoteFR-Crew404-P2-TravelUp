@@ -2,7 +2,7 @@ import Checkbox from "./components/Checkbox";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import QuestionsForm from "./components/QuestionsForm";
-
+import About from "./pages/About";
 import "./App.css";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
       <div>
         <NavBar />
         <Checkbox />
+        <About />
         <Footer />
       </div>
     </div>

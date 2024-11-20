@@ -15,15 +15,4 @@
 }
 .myabout {
   text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-.monlogo {
-  width: 200px;
-  height: 200px;
-}
-
-.first_element {
-  margin: auto;
-  margin-top: 160px;
 }
