@@ -1,5 +1,7 @@
-import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+import ReactDOM from "react-dom/client";
+
 import App from "./App";
 import QuestionsForm from "./components/QuestionsForm";
 import About from "./pages/About";
