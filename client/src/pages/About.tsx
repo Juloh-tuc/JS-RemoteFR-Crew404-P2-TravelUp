@@ -1,3 +1,4 @@
+
 import "./About.css";
 function About() {
   return (
@@ -19,7 +20,7 @@ function About() {
         <br />
         fonction des envies de l'utilisateur à travers un questionnaire. Ce
         <br />
-        concept vient remplacer la méthode traditionnelle qui consiste à choisir{" "}
+        concept vient remplacer la méthode traditionnelle qui consiste à choisir
         <br />
         par soi-même son lieu de vacances. Cependant, nous allons continuer de
         <br />

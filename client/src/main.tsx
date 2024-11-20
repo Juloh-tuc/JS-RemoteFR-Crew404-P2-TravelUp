@@ -1,24 +1,47 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+
+
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import "./App.css";
+
+
+
+import ReactDOM from "react-dom/client";
 
 import App from "./App";
+import QuestionsForm from "./components/QuestionsForm";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
+
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact/:id",
+        element: <Contact />,
+      },
+      {
+        path: "/quiz",
+        element: <QuestionsForm />,
+      },
+    ],
+
   },
 ]);
 
 const rootElement = document.getElementById("root");
-if (rootElement == null) {
-  throw new Error(`Your HTML Document should contain a <div id="root"></div>`);
+
+
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(<RouterProvider router={router} />);
 }
 
-createRoot(rootElement).render(
-  <StrictMode>
-    <RouterProvider router={router} />
-  </StrictMode>,
-);

@@ -1,14 +1,14 @@
 import { useState } from "react";
 import "../components/NavBar.css";
-
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.png";
 function NavBar() {
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <>
       <img
         className="logo"
-        src="/img/logo.png"
+        src={logo}
         alt="une terre avec un pins rouge au couleur de notre charte"
       />
 
@@ -18,25 +18,24 @@ function NavBar() {
         onMouseLeave={() => setIsExpanded(false)}
       >
         <ul className="navbar-links">
-          <li>
-            <a href="#about">
-              <img src="/img/about.png" alt="About" />
-            </a>
-          </li>
-          <li>
-            <a href="#home">
-              <img src="/img/home.png" alt="Home" />
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              <img src="/img/contact.png" alt="Contact" />
-            </a>
-          </li>
+          <Link to="/about" type="link">
+            About
+          </Link>
+
+          <Link to="/" type="link">
+            Home
+          </Link>
+
+          <Link to="/contact/123" type="link">
+            Contact
+          </Link>
+
+          <Link to="/quiz" type="link">
+            Quiz
+          </Link>
         </ul>
       </nav>
     </>
   );
 }
-
 export default NavBar;
