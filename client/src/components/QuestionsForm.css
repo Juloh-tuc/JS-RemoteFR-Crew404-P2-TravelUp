@@ -103,7 +103,8 @@ input[type="checkbox"]:not(:checked) + label {
   border-radius: 20%;
   animation: notilt-shaking 0.4s ease-in-out;
 }
-input[type="checkbox"] {
+
+.show {
   display: none;
 }
 

@@ -181,7 +181,7 @@ const QuestionsForm: React.FC = () => {
                     className="option-wrapper"
                   >
                     <input
-                      className="questions"
+                      className="questions show"
                       type="checkbox"
                       id={option.label}
                       name={currentQuestionKey}

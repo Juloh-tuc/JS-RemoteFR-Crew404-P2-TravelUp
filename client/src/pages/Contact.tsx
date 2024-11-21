@@ -9,7 +9,6 @@ function Contact() {
 
   useEffect(() => {
     const images = [
-      "https://images.pexels.com/photos/257092/pexels-photo-257092.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/1108701/pexels-photo-1108701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/2166553/pexels-photo-2166553.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "https://images.pexels.com/photos/29032545/pexels-photo-29032545/free-photo-of-spectacular-cliffs-of-etretat-in-normandy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
