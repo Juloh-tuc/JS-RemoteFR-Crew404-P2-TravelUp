@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import "./Contact.css";
+import "../main.tsx";
 
 function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const countries = {
     allemagne: {
       backgroundColor: "brown",
@@ -18,7 +21,7 @@ function Contact() {
         "https://image.noelshack.com/fichiers/2024/47/3/1732113804-pexels-freestockpro-2166559.jpg",
     },
     canada: {
-      backgroundColor: "green",
+      backgroundColor: "#2b6ca3",
       id: "CA",
       number: 3,
       backgroundImage:
@@ -140,13 +143,21 @@ function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    console.info("Form submitted!");
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
+    }, 2000);
   };
 
   return (
     <body
-      className="contact-background customizable"
+      className="contact-background"
       style={{
         backgroundImage: `url(${currentCountry.backgroundImage})`,
         backgroundSize: "cover",
@@ -158,44 +169,52 @@ function Contact() {
         <h2 style={{ color: `${currentCountry.backgroundColor}` }}>
           Contactez-nous
         </h2>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="name">_</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Votre nom"
-            required
-          />
+        {isSubmitted ? (
+          <div className="success-animation">
+            <img src="/success-animation.gif" alt="Success Animation" />
+            <p>Merci ! Votre message a été envoyé.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">_</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Votre nom"
+              required
+            />
 
-          <label htmlFor="email">_</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Votre email"
-            required
-          />
+            <label htmlFor="email">_</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre email"
+              required
+            />
 
-          <label htmlFor="message">_</label>
-          <textarea
-            id="message"
-            name="message"
-            rows={5}
-            placeholder="Votre message"
-            required
-          />
+            <label htmlFor="message">_</label>
+            <textarea
+              id="message"
+              name="message"
+              rows={5}
+              placeholder="Votre message"
+              required
+            />
 
-          <button
-            className="envoyer customizable"
-            type="submit"
-            style={{
-              backgroundColor: `${currentCountry.backgroundColor}`,
-            }}
-          >
-            Envoyer
-          </button>
-        </form>
+            <button
+              className="envoyer"
+              type="submit"
+              disabled={isSubmitting}
+              style={{
+                backgroundColor: `${currentCountry.backgroundColor}`,
+              }}
+            >
+              {isSubmitting ? "Envoi en cours..." : "Envoyer"}
+            </button>
+          </form>
+        )}
       </div>
     </body>
   );
