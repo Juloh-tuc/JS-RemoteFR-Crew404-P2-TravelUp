@@ -1,0 +1,14 @@
+.questions-form-container {
+  display: flex;
+}
+
+.map-container {
+  flex: 1;
+  margin-right: 20px;
+  padding: 5rem;
+}
+
+.form-container {
+  flex: 2;
+  padding: 10rem;
+}

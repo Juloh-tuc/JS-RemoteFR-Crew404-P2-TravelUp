@@ -12,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
   text-align: center;
   border: 1px solid #00a676;
@@ -84,4 +85,9 @@ h3 {
 figcaption {
   margin-left: 70px;
   margin-top: 10px;
+
+  background-color: #ffe7de;
+}
+.myabout {
+  text-align: center;
 }

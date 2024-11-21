@@ -8,10 +8,7 @@ const questions = {
       img: "climate-cold.png",
       checked: false,
     },
-    {
-      img: "climate-temperate.png",
-      checked: false,
-    },
+    { img: "climate-temperate.png", checked: false },
   ],
   budget: [
     { img: "budget-high.png", checked: false },
