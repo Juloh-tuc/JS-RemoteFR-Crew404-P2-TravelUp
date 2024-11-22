@@ -1,16 +1,26 @@
-import { Outlet } from "react-router-dom";
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import "./App.css";
 import "./pages/Contact.css";
-import { useEffect } from "react";
 import "./BackgroundStyles.css";
 
 function App() {
+  const location = useLocation();
+
   useEffect(() => {
-    // Set a default background on app load
     document.body.className = "body-default";
-  }, []);
+
+    const knownPaths = ["/", "/about", "/contact", "/quiz"];
+
+    if (location.pathname === "/") {
+      document.body.classList.add("body-home");
+    } else if (!knownPaths.some((path) => location.pathname.startsWith(path))) {
+      document.body.classList.add("body-error");
+    }
+  }, [location]);
+
   return (
     <div className="App">
       <div>

@@ -19,13 +19,11 @@ const WorldMap: React.FC<MapProps> = ({ highlightedCountries }) => {
   useEffect(() => {
     const element = document.getElementById("world-map");
     if (element && element instanceof SVGElement) {
-      // Set default color for all countries
       const paths = element.querySelectorAll("path");
       for (const path of paths) {
         path.setAttribute("fill", "gray");
       }
 
-      // Highlight selected countries
       for (const countryId of highlightedCountries) {
         const countryElement = element.querySelector(`#${countryId}`);
         if (countryElement) {
