@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import questionsData from "../components/questions.json";
 import "./QuestionsForm.css";
-import WorldMap from "../components/Map";
-import "../components/Map.css";
+import WorldMap from "../components/WorldMap";
+import "../components/WorldMap.css";
 
 interface Answer {
   img: string;

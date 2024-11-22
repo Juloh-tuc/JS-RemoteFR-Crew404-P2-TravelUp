@@ -1,7 +1,17 @@
 import "./Home.css";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
+  useEffect(() => {
+    // Add the class for the home background JS style
+    document.body.className = "body-home";
+
+    // Cleanup to reset to default background JS style
+    return () => {
+      document.body.className = "body-default";
+    };
+  }, []);
   return (
     <div className="home-container">
       <div className="home-left">
