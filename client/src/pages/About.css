@@ -17,6 +17,10 @@ header {
   text-align: center;
   border: 1px solid #00a676;
   text-shadow: 3px 3px 0px black;
+  width: 50%;
+  margin: auto;
+  border-radius: 30px;
+  background-color: #ffe7de;
 }
 .myabout {
   border: 1px solid #00a676;
