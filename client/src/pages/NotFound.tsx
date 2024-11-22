@@ -3,12 +3,13 @@ import { useEffect } from "react";
 
 const NotFound = () => {
   useEffect(() => {
-    document.body.className = "body-error";
+    document.body.classList.add("body-error");
 
     return () => {
-      document.body.className = "body-default"; //ou default
+      document.body.classList.remove("body-error");
     };
   }, []);
+
   return (
     <div className="not-found">
       <h1 className="not-found__title">404</h1>
