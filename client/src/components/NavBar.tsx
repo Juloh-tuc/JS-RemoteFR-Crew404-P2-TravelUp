@@ -1,41 +1,60 @@
 import { useState } from "react";
-import "../components/NavBar.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import "../components/NavBar.css";
+import {
+  FaBars,
+  FaEnvelope,
+  FaHome,
+  FaInfoCircle,
+  FaQuestionCircle,
+  FaTimes,
+} from "react-icons/fa";
+
 function NavBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-      <img
-        className="logo"
-        src={logo}
-        alt="une terre avec un pins rouge au couleur de notre charte"
-      />
+      <nav className="navbar">
+        <img
+          className="logo"
+          src={logo}
+          alt="une terre avec un pins rouge au couleur de notre charte"
+        />
+        <button className="burger-menu" type="button" onClick={toggleMenu}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
 
-      <nav
-        className={`navbar ${isExpanded ? "expanded" : ""}`}
-        onMouseEnter={() => setIsExpanded(true)}
-        onMouseLeave={() => setIsExpanded(false)}
-      >
-        <ul className="navbar-links">
-          <Link to="/about" type="link">
-            About
-          </Link>
-
-          <Link to="/" type="link">
-            Home
-          </Link>
-
-          <Link to="/contact/123" type="link">
-            Contact
-          </Link>
-
-          <Link to="/quiz" type="link">
-            Quiz
-          </Link>
+        <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
+          <li>
+            <Link to="/about">
+              <FaInfoCircle /> About
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <FaHome /> Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact/123">
+              <FaEnvelope /> Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/quiz">
+              <FaQuestionCircle /> Quiz
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
   );
 }
+
 export default NavBar;
