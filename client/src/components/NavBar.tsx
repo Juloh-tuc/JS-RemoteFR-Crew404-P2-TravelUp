@@ -19,13 +19,13 @@ function NavBar() {
   };
 
   return (
-    <>
+    <div className="travelup">
+      <img
+        className="logo"
+        src={logo}
+        alt="une terre avec un pins rouge au couleur de notre charte"
+      />
       <nav className="navbar">
-        <img
-          className="logo"
-          src={logo}
-          alt="une terre avec un pins rouge au couleur de notre charte"
-        />
         <button className="burger-menu" type="button" onClick={toggleMenu}>
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -53,7 +53,7 @@ function NavBar() {
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 }
 
