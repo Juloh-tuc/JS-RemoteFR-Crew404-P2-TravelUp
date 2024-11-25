@@ -182,7 +182,7 @@ function Contact() {
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
-            <label htmlFor="name">_</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
@@ -191,7 +191,7 @@ function Contact() {
               required
             />
 
-            <label htmlFor="email">_</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -200,7 +200,7 @@ function Contact() {
               required
             />
 
-            <label htmlFor="message">_</label>
+            <label htmlFor="message">Message</label>
             <textarea
               id="message"
               name="message"

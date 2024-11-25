@@ -1,41 +1,60 @@
 import { useState } from "react";
-import "../components/NavBar.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import "../components/NavBar.css";
+
 function NavBar() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-      <img
-        className="logo"
-        src={logo}
-        alt="une terre avec un pins rouge au couleur de notre charte"
-      />
-
-      <nav
-        className={`navbar ${isExpanded ? "expanded" : ""}`}
-        onMouseEnter={() => setIsExpanded(true)}
-        onMouseLeave={() => setIsExpanded(false)}
-      >
-        <ul className="navbar-links">
-          <Link to="/about" type="link">
-            About
-          </Link>
-
-          <Link to="/" type="link">
-            Home
-          </Link>
-
-          <Link to="/contact/123" type="link">
-            Contact
-          </Link>
-
-          <Link to="/quiz" type="link">
-            Quiz
-          </Link>
+      {location.pathname === "/" && (
+        <img
+          className="logo"
+          src={logo}
+          alt="une terre avec un pins rouge au couleur de notre charte"
+        />
+      )}
+      <nav className="navbar">
+        <div className="navbar-header">
+          <button
+            className="burger-menu"
+            type="button"
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            #
+          </button>
+        </div>
+        <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
+          <li>
+            <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact/123" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link to="/quiz" onClick={() => setIsMenuOpen(false)}>
+              Quiz
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
   );
 }
+
 export default NavBar;
