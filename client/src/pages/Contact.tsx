@@ -40,7 +40,7 @@ function Contact() {
         backgroundImage: baliImage,
       },
       canada: {
-        backgroundColor: "black",
+        backgroundColor: "blue",
         id: "CA",
         number: 3,
         backgroundImage: canadaImage,
