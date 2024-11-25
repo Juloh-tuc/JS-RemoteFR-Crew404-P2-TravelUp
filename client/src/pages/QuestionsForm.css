@@ -54,15 +54,17 @@
 h2 {
   margin: 1.5rem;
   color: #00a676;
-  font-size: 130%;
+  font-size: 90%;
   text-align: center;
 }
 
 .checkbox-container {
   display: flex;
   justify-content: center;
-  margin-top: 15%;
-  padding-left: 60%;
+  padding-left: 11rem;
+  padding-top: 10%;
+  margin-right: 65%;
+  transform: scale(0.9);
 }
 
 form {
@@ -70,18 +72,18 @@ form {
   gap: 15px;
   align-items: center;
   justify-items: center;
-  max-width: 700px;
   margin: auto;
+  max-width: 500px;
 }
 
 fieldset {
   border: none;
   background-color: var(--first-color);
-  width: 100%;
   color: black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 
 label {
@@ -90,7 +92,8 @@ label {
   align-items: center;
   cursor: pointer;
   transition: all 1s;
-  padding: 10px;
+  padding: 6px;
+  font-size: 0.8rem;
 }
 
 input[type="checkbox"]:checked + label {
@@ -111,7 +114,7 @@ input[type="checkbox"]:not(:checked) + label {
 .options-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 8px;
   justify-items: center;
   width: 100%;
 }
@@ -123,15 +126,15 @@ input[type="checkbox"]:not(:checked) + label {
 }
 
 .option-image {
-  width: 80px;
-  height: 80px;
+  width: 30px;
+  height: 30px;
   object-fit: cover;
   margin-bottom: 8px;
 }
 
 .validate {
   grid-column: span 3;
-  padding: 10px 20px;
+  padding: 0.5rem 1.2rem;
   background-color: #00a676;
   color: white;
   border: none;
@@ -141,7 +144,8 @@ input[type="checkbox"]:not(:checked) + label {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30%;
+  width: 5rem;
+  height: 1.5rem;
   background-color: #ffd19a;
   border: 0 solid #e5e7eb;
   color: #000000;
@@ -173,4 +177,62 @@ input[type="checkbox"]:not(:checked) + label {
 .validate:hover:after {
   bottom: 2px;
   left: 2px;
+}
+
+@media (min-width: 768px) {
+  .checkbox-container {
+    margin-top: 15%;
+    padding-left: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    margin: 1.5rem;
+    color: #00a676;
+    font-size: 130%;
+    text-align: center;
+  }
+  .checkbox-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-top: 5%;
+    margin-right: 25%;
+    margin-top: 45%;
+  }
+
+  .option-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+
+  .validate {
+    grid-column: span 3;
+    padding: 10px 20px;
+    background-color: #00a676;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color: #ffd19a;
+    border: 0 solid #e5e7eb;
+    color: #000000;
+    line-height: 1.75rem;
+    padding: 1.5rem 1.65rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    text-decoration-thickness: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
 }

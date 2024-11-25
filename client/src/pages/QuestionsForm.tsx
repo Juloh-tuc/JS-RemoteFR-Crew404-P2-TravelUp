@@ -63,6 +63,13 @@ const QuestionsForm: React.FC = () => {
   const currentQuestionLabel = questionLabels[currentQuestionKey];
 
   useEffect(() => {
+    document.body.className = "body-QuestionsForm";
+    return () => {
+      document.body.className = ""; // Réinitialise la classe lors du démontage du composant
+    };
+  }, []);
+
+  useEffect(() => {
     fetch("http://localhost:3310/api/countries")
       .then((response) => response.json())
       .then((data: { [key: string]: Country }) => {

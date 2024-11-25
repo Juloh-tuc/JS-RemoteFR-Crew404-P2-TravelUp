@@ -1,14 +1,32 @@
 .questions-form-container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .map-container {
-  flex: 1;
-  margin-right: 20px;
-  padding: 5rem;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
 }
 
-.form-container {
-  flex: 2;
-  padding: 10rem;
+.map {
+  width: 115%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .map {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .map {
+    width: 100%;
+  }
+
+  .map-container {
+    flex: 1;
+  }
 }
