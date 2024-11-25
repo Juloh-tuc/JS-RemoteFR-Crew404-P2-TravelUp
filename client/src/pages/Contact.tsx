@@ -11,7 +11,7 @@ import islandeImage from "../assets/images/islande.jpeg";
 import italieImage from "../assets/images/italie.jpeg";
 import japonImage from "../assets/images/japon.jpeg";
 import laReunionImage from "../assets/images/laReunion.jpeg";
-import londonImage from "../assets/images/london.webp";
+import londonImage from "../assets/images/london.jpeg";
 import nouvelleZImage from "../assets/images/nouvelleZ.jpeg";
 import paysBasImage from "../assets/images/paysBas.jpeg";
 import polynesieImage from "../assets/images/polynesie.jpeg";
@@ -34,19 +34,19 @@ function Contact() {
         backgroundImage: allemagneImage,
       },
       bali: {
-        backgroundColor: "red",
+        backgroundColor: "black",
         id: "MY",
         number: 2,
         backgroundImage: baliImage,
       },
       canada: {
-        backgroundColor: "#2b6ca3",
+        backgroundColor: "blue",
         id: "CA",
         number: 3,
         backgroundImage: canadaImage,
       },
       inde: {
-        backgroundColor: "pink",
+        backgroundColor: "#D291BC",
         id: "IN",
         number: 4,
         backgroundImage: indeImage,
@@ -58,7 +58,7 @@ function Contact() {
         backgroundImage: islandeImage,
       },
       italie: {
-        backgroundColor: "pink",
+        backgroundColor: "#70049D",
         id: "IT",
         number: 6,
         backgroundImage: italieImage,
@@ -70,25 +70,25 @@ function Contact() {
         backgroundImage: japonImage,
       },
       laReunion: {
-        backgroundColor: "pink",
+        backgroundColor: "#138808",
         id: "RE",
         number: 8,
         backgroundImage: laReunionImage,
       },
       london: {
-        backgroundColor: "pink",
+        backgroundColor: "red",
         id: "GB",
         number: 9,
         backgroundImage: londonImage,
       },
       nouvelleZ: {
-        backgroundColor: "pink",
+        backgroundColor: "#E8AD82",
         id: "NZ",
         number: 10,
         backgroundImage: nouvelleZImage,
       },
       paysBas: {
-        backgroundColor: "pink",
+        backgroundColor: "red",
         id: "NL",
         number: 11,
         backgroundImage: paysBasImage,
@@ -106,7 +106,7 @@ function Contact() {
         backgroundImage: singapourImage,
       },
       spain: {
-        backgroundColor: "pink",
+        backgroundColor: "brown",
         id: "ES",
         number: 14,
         backgroundImage: spainImage,
@@ -124,7 +124,7 @@ function Contact() {
         backgroundImage: tanzanieImage,
       },
       turquie: {
-        backgroundColor: "pink",
+        backgroundColor: "blue",
         id: "TR",
         number: 17,
         backgroundImage: turquieImage,
