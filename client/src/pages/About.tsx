@@ -13,7 +13,7 @@ function About() {
         <h1>À propos de nous</h1>
       </header>
       <div className="mycontainer1">
-        <section className="myelement">
+        <section className="myelement1">
           <h3>Notre histoire</h3>
           <p>
             L'idée du site "Travel Up" est née de quatre étudiants qui sont en
@@ -26,7 +26,7 @@ function About() {
         </div>
       </div>
       <div className="container_equipe">
-        <section className="myelement">
+        <section className="myelement2">
           <h3>L'équipe</h3>
           <p>
             L'équipe est constituée de Charles, Camille, Julie et Frank qui sont
@@ -55,7 +55,7 @@ function About() {
         </div>
       </div>
       <div className="container_mission">
-        <section className="myelement2">
+        <section className="myelement3">
           <h3>Notre mission</h3>
           <p>
             L'objectif de ce site, c'est de vous proposer des destinations en
