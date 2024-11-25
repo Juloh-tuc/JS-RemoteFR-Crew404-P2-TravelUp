@@ -1,132 +1,137 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./Contact.css";
 import "../main.tsx";
+
+// Importing all the images, this is a temporary solution, don't freakout Anthony for mother of god.
+import allemagneImage from "../assets/images/allemagne.jpeg";
+import baliImage from "../assets/images/bali.jpeg";
+import canadaImage from "../assets/images/canada.jpeg";
+import indeImage from "../assets/images/inde.jpeg";
+import islandeImage from "../assets/images/islande.jpeg";
+import italieImage from "../assets/images/italie.jpeg";
+import japonImage from "../assets/images/japon.jpeg";
+import laReunionImage from "../assets/images/laReunion.jpeg";
+import londonImage from "../assets/images/london.webp";
+import nouvelleZImage from "../assets/images/nouvelleZ.jpeg";
+import paysBasImage from "../assets/images/paysBas.jpeg";
+import polynesieImage from "../assets/images/polynesie.jpeg";
+import singapourImage from "../assets/images/singapour.jpeg";
+import spainImage from "../assets/images/spain.jpeg";
+import suisseImage from "../assets/images/suisse.jpeg";
+import tanzanieImage from "../assets/images/tanzanie.jpeg";
+import turquieImage from "../assets/images/turquie.jpeg";
 
 function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const countries = {
-    allemagne: {
-      backgroundColor: "brown",
-      id: "DE",
-      number: 1,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732113630-pexels-jplenio-1119972.jpg",
-    },
-    bali: {
-      backgroundColor: "red",
-      id: "MY",
-      number: 2,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732113804-pexels-freestockpro-2166559.jpg",
-    },
-    canada: {
-      backgroundColor: "#2b6ca3",
-      id: "CA",
-      number: 3,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732114041-pexels-souvenirpixels-417074.jpg",
-    },
-    inde: {
-      backgroundColor: "pink",
-      id: "IN",
-      number: 4,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732128950-pexels-sudipta-1603650.jpg",
-    },
-    islande: {
-      backgroundColor: "pink",
-      id: "IS",
-      number: 5,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129011-pexels-simonmigaj-1009136.jpg",
-    },
-    italie: {
-      backgroundColor: "pink",
-      id: "IT",
-      number: 6,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129074-pexels-davifnr-2064827.jpg",
-    },
-    japon: {
-      backgroundColor: "pink",
-      id: "JP",
-      number: 7,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129125-pexels-liger-pham-232622-1108701.jpg",
-    },
-    laReunion: {
-      //??
-      backgroundColor: "pink",
-      id: "RE",
-      number: 8,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732114112-pexels-sudipta-1603650.jpg",
-    },
-    london: {
-      backgroundColor: "pink",
-      id: "GB",
-      number: 9,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129298-pexels-pixabay-460672.jpg",
-    },
-    nouvelleZ: {
-      backgroundColor: "pink",
-      id: "NZ",
-      number: 10,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129414-pexels-donovan-kelly-110228397-17824134-1.jpg",
-    },
-    paysBas: {
-      backgroundColor: "pink",
-      id: "NL",
-      number: 11,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129469-pexels-tanathip-rattanatum-1050216-2026451.jpg",
-    },
-    polynesie: {
-      backgroundColor: "pink",
-      id: "PF",
-      number: 12,
-      backgroundImage: // ??
-        "https://image.noelshack.com/fichiers/2024/47/3/1732114112-pexels-sudipta-1603650.jpg",
-    },
-    singapour: {
-      backgroundColor: "pink",
-      id: "SG",
-      number: 13,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129586-pexels-alaric-sim-380461-1029188.jpg",
-    },
-    spain: {
-      backgroundColor: "pink",
-      id: "ES",
-      number: 14,
-      backgroundImage: // ??
-        "https://image.noelshack.com/fichiers/2024/47/3/1732114112-pexels-sudipta-1603650.jpg",
-    },
-    suisse: {
-      backgroundColor: "pink",
-      id: "CH",
-      number: 15,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129705-pexels-robert-stokoe-105922-733148.jpg",
-    },
-    tanzanie: {
-      backgroundColor: "pink",
-      id: "TZ",
-      number: 16,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129748-pexels-hendrikcornelissen-2862070-1.jpg",
-    },
-    turquie: {
-      backgroundColor: "pink",
-      id: "TR",
-      number: 17,
-      backgroundImage:
-        "https://image.noelshack.com/fichiers/2024/47/3/1732129789-pexels-adilgkkya-2668314.jpg",
-    },
-  };
+
+  const countries = useMemo(
+    () => ({
+      allemagne: {
+        backgroundColor: "brown",
+        id: "DE",
+        number: 1,
+        backgroundImage: allemagneImage,
+      },
+      bali: {
+        backgroundColor: "red",
+        id: "MY",
+        number: 2,
+        backgroundImage: baliImage,
+      },
+      canada: {
+        backgroundColor: "#2b6ca3",
+        id: "CA",
+        number: 3,
+        backgroundImage: canadaImage,
+      },
+      inde: {
+        backgroundColor: "pink",
+        id: "IN",
+        number: 4,
+        backgroundImage: indeImage,
+      },
+      islande: {
+        backgroundColor: "pink",
+        id: "IS",
+        number: 5,
+        backgroundImage: islandeImage,
+      },
+      italie: {
+        backgroundColor: "pink",
+        id: "IT",
+        number: 6,
+        backgroundImage: italieImage,
+      },
+      japon: {
+        backgroundColor: "pink",
+        id: "JP",
+        number: 7,
+        backgroundImage: japonImage,
+      },
+      laReunion: {
+        backgroundColor: "pink",
+        id: "RE",
+        number: 8,
+        backgroundImage: laReunionImage,
+      },
+      london: {
+        backgroundColor: "pink",
+        id: "GB",
+        number: 9,
+        backgroundImage: londonImage,
+      },
+      nouvelleZ: {
+        backgroundColor: "pink",
+        id: "NZ",
+        number: 10,
+        backgroundImage: nouvelleZImage,
+      },
+      paysBas: {
+        backgroundColor: "pink",
+        id: "NL",
+        number: 11,
+        backgroundImage: paysBasImage,
+      },
+      polynesie: {
+        backgroundColor: "pink",
+        id: "PF",
+        number: 12,
+        backgroundImage: polynesieImage,
+      },
+      singapour: {
+        backgroundColor: "pink",
+        id: "SG",
+        number: 13,
+        backgroundImage: singapourImage,
+      },
+      spain: {
+        backgroundColor: "pink",
+        id: "ES",
+        number: 14,
+        backgroundImage: spainImage,
+      },
+      suisse: {
+        backgroundColor: "pink",
+        id: "CH",
+        number: 15,
+        backgroundImage: suisseImage,
+      },
+      tanzanie: {
+        backgroundColor: "pink",
+        id: "TZ",
+        number: 16,
+        backgroundImage: tanzanieImage,
+      },
+      turquie: {
+        backgroundColor: "pink",
+        id: "TR",
+        number: 17,
+        backgroundImage: turquieImage,
+      },
+    }),
+    [],
+  );
 
   const [currentCountry, setCurrentCountry] = useState({
     backgroundImage: "",
@@ -139,7 +144,7 @@ function Contact() {
       countryKeys[Math.floor(Math.random() * countryKeys.length)];
     const randomCountry = countries[randomKey];
     setCurrentCountry(randomCountry);
-  }, []);
+  }, [countries]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -162,6 +167,7 @@ function Contact() {
         backgroundImage: `url(${currentCountry.backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         height: "100vh",
       }}
     >
@@ -176,7 +182,7 @@ function Contact() {
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
-            <label htmlFor="name">_</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               id="name"
@@ -185,7 +191,7 @@ function Contact() {
               required
             />
 
-            <label htmlFor="email">_</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -194,7 +200,7 @@ function Contact() {
               required
             />
 
-            <label htmlFor="message">_</label>
+            <label htmlFor="message">Message</label>
             <textarea
               id="message"
               name="message"

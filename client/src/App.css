@@ -1,7 +1,15 @@
+:root {
+  scroll-behavior: smooth;
+  --body-font: "Montserrat", sans-serif;
+  --primary-color: #ffe7de;
+  --second-color: #ffd19a;
+  --third-color: #00a676;
+  --fourth-color: #a1e8cc;
+}
+
 body {
   font-family: var(--body-font);
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffe7de, #fbd0bf, #f8bab0, #f7a69f);
 }
 
 .navBar .item {
