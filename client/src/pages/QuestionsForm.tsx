@@ -65,7 +65,7 @@ const QuestionsForm: React.FC = () => {
   useEffect(() => {
     document.body.className = "body-QuestionsForm";
     return () => {
-      document.body.className = ""; // Réinitialise la classe lors du démontage du composant
+      document.body.className = "body-QuestionsForm";
     };
   }, []);
 
