@@ -22,13 +22,14 @@ header {
   border-radius: 20px;
   margin-top: 40px;
 }
-.myabout {
+.aboutpage {
+  text-align: center;
   border: 1px solid #00a676;
   background-image: url("../assets/images/aboutimage.jpg");
   background-repeat: no-repeat;
 }
 
-.myelement1 {
+.history {
   border: 1px solid black;
   width: 230px;
   height: 230px;
@@ -36,7 +37,7 @@ header {
   border-radius: 40px;
   padding: 5px;
 }
-.myelement2 {
+.team {
   border: 1px solid black;
   width: 230px;
   height: 230px;
@@ -44,7 +45,7 @@ header {
   border-radius: 40px;
   padding: 5px;
 }
-.myelement3 {
+.mission {
   border: 1px solid black;
   width: 230px;
   height: 300px;
@@ -52,23 +53,23 @@ header {
   border-radius: 40px;
   padding: 5px;
 }
-.myhistory {
+.avatar_history {
   width: 230px;
   height: 230px;
   border-radius: 110px;
 }
-.mycontainer1 {
+.container_history {
   display: flex;
   justify-content: center;
   gap: 90px;
   margin-top: 20px;
 }
-.myphoto {
+.avatar {
   width: 200px;
   height: 200px;
   border-radius: 90px;
 }
-.myphoto:hover {
+.avatar:hover {
   cursor: crosshair;
   transform: rotate(360deg);
   transition: all 0.5s ease-in-out 0s;
@@ -105,12 +106,9 @@ figcaption {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.myabout {
-  text-align: center;
-}
 
 @media screen and (max-width: 960px) {
-  .myphoto {
+  .avatar {
     display: none;
   }
   figcaption {
@@ -119,17 +117,17 @@ figcaption {
   .mission_photo {
     display: none;
   }
-  .myhistory {
+  .avatar_history {
     display: none;
   }
-  .myelement3 {
+  .mission {
     margin-top: 5px;
     margin-bottom: 40px;
   }
-  .myelement1 {
+  .history {
     margin-left: 80px;
   }
-  .myelement2 {
+  .team {
     margin-bottom: 20px;
     margin-left: 15px;
   }
