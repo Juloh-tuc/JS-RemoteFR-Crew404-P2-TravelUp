@@ -8,12 +8,12 @@ import mission from "../assets/images/mission.png";
 
 function About() {
   return (
-    <div className="myabout">
+    <div className="aboutpage">
       <header>
         <h1>À propos de nous</h1>
       </header>
-      <div className="mycontainer1">
-        <section className="myelement1">
+      <div className="container_history">
+        <section className="history">
           <h3>Notre histoire</h3>
           <p>
             L'idée du site "Travel Up" est née de quatre étudiants qui sont en
@@ -22,11 +22,15 @@ function About() {
           </p>
         </section>
         <div>
-          <img src={history} alt="avatar d'histoire" className="myhistory" />
+          <img
+            src={history}
+            alt="avatar d'histoire"
+            className="avatar_history"
+          />
         </div>
       </div>
       <div className="container_equipe">
-        <section className="myelement2">
+        <section className="team">
           <h3>L'équipe</h3>
           <p>
             L'équipe est constituée de Charles, Camille, Julie et Frank qui sont
@@ -36,26 +40,26 @@ function About() {
           </p>
         </section>
         <div className="container_photo">
-          <div className="element1">
-            <img src={camille} alt="avatar camille" className="myphoto" />
+          <div className="camille">
+            <img src={camille} alt="avatar camille" className="avatar" />
             <figcaption>Camille</figcaption>
           </div>
-          <div className="element2">
-            <img src={charles} alt="avatar charles" className="myphoto" />
+          <div className="charles">
+            <img src={charles} alt="avatar charles" className="avatar" />
             <figcaption>Charles</figcaption>
           </div>
-          <div className="element3">
-            <img src={julie} alt="avatar julie" className="myphoto" />
+          <div className="julie">
+            <img src={julie} alt="avatar julie" className="avatar" />
             <figcaption>Julie</figcaption>
           </div>
-          <div className="element4">
-            <img src={frank} alt="avatar frank" className="myphoto" />
+          <div className="frank">
+            <img src={frank} alt="avatar frank" className="avatar" />
             <figcaption>Frank</figcaption>
           </div>
         </div>
       </div>
       <div className="container_mission">
-        <section className="myelement3">
+        <section className="mission">
           <h3>Notre mission</h3>
           <p>
             L'objectif de ce site, c'est de vous proposer des destinations en
