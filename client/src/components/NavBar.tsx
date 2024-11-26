@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../components/NavBar.css";
+import menuIcon from "../assets/images/menu.png";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ function NavBar() {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            #
+            <img src={menuIcon} alt="Menu burger" className="menu-icon" />
           </button>
         </div>
         <ul className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
