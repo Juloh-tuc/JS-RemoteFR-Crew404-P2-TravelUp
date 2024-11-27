@@ -33,8 +33,8 @@ function About() {
         <section className="team">
           <h3>L'équipe</h3>
           <p>
-            L'équipe est constituée de Charles, Camille, Julie et Frank qui sont
-            en reconversion professionnelle. Nous sommes tous motivés pour
+            L'équipe est constituée de Charles, Camille, Julie et Frank Sena qui
+            sont en reconversion professionnelle. Nous sommes tous motivés pour
             réussir ce projet pour pouvoir partager notre passion pour les
             voyages.
           </p>
@@ -54,7 +54,7 @@ function About() {
           </div>
           <div className="frank">
             <img src={frank} alt="avatar frank" className="avatar" />
-            <figcaption>Frank</figcaption>
+            <figcaption>Frank Sena</figcaption>
           </div>
         </div>
       </div>
