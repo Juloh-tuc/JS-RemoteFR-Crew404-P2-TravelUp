@@ -3,11 +3,11 @@ import "./Contact.css";
 import "../main.tsx";
 
 // Importing all the images, this is a temporary solution, don't freakout Anthony for mother of god.
-import allemagneImage from "../assets/images/allemagne.jpeg";
+import allemagneImage from "../assets/images/allemagne.jpg";
 import baliImage from "../assets/images/bali.jpeg";
 import canadaImage from "../assets/images/canada.jpeg";
 import indeImage from "../assets/images/inde.jpeg";
-import islandeImage from "../assets/images/islande.jpeg";
+import islandeImage from "../assets/images/islande.jpg";
 import italieImage from "../assets/images/italie.jpeg";
 import japonImage from "../assets/images/japon.jpeg";
 import laReunionImage from "../assets/images/laReunion.jpeg";
@@ -15,9 +15,9 @@ import londonImage from "../assets/images/london.jpeg";
 import nouvelleZImage from "../assets/images/nouvelleZ.jpeg";
 import paysBasImage from "../assets/images/paysBas.jpeg";
 import polynesieImage from "../assets/images/polynesie.jpeg";
-import singapourImage from "../assets/images/singapour.jpeg";
+import singapourImage from "../assets/images/singapourJ.jpg";
 import spainImage from "../assets/images/spain.jpeg";
-import suisseImage from "../assets/images/suisse.jpeg";
+import suisseImage from "../assets/images/suisse.jpg";
 import tanzanieImage from "../assets/images/tanzanie.jpeg";
 import turquieImage from "../assets/images/turquie.jpeg";
 
@@ -177,12 +177,14 @@ function Contact() {
         </h2>
         {isSubmitted ? (
           <div className="success-animation">
-            <img src="/success-animation.gif" alt="Success Animation" />
+            <img src="https://i.gifer.com/1BOk.gif" alt="Success Animation" />
             <p>Merci ! Votre message a été envoyé.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
+            <label className="visible" htmlFor="name">
+              Name
+            </label>
             <input
               type="text"
               id="name"
@@ -191,7 +193,9 @@ function Contact() {
               required
             />
 
-            <label htmlFor="email">Email</label>
+            <label className="visible" htmlFor="email">
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -200,7 +204,9 @@ function Contact() {
               required
             />
 
-            <label htmlFor="message">Message</label>
+            <label className="visible" htmlFor="message">
+              Message
+            </label>
             <textarea
               id="message"
               name="message"

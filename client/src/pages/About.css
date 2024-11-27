@@ -19,6 +19,7 @@ header {
   border: 1px solid #00a676;
   background-image: url("../assets/images/aboutimage.jpg");
   background-repeat: no-repeat;
+  margin-top: -31px;
 }
 
 .history {

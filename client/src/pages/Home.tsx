@@ -14,8 +14,10 @@ function Home() {
   return (
     <div className="home-container">
       <div className="home-left">
-        <h1>Explorez le Monde</h1>
-        <p>Découvrez votre prochaine destination de rêve.</p>
+        <h1 className="responsive-hide">Explorez le Monde</h1>
+        <p className="responsive-hide">
+          Découvrez votre prochaine destination de rêve.
+        </p>
         <img
           src="https://i.ibb.co/tQZYCfj/Gif.gif"
           alt="Animation du voyage"
@@ -27,6 +29,13 @@ function Home() {
         <Link to="/quiz" className="home-quiz-button customizable">
           Découvrez votre voyage !
         </Link>
+        <div className="home-gif-container">
+          <img
+            src="https://i.ibb.co/VB1K1N8/video-Travel.gif"
+            alt="Vidéo Voyage"
+            className="home-gif"
+          />
+        </div>
       </div>
     </div>
   );

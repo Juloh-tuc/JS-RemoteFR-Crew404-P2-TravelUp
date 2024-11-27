@@ -14,6 +14,10 @@
   --small-font-size: 0.875rem;
   --smaller-font-size: 0.813rem;
 }
+body {
+  background: linear-gradient(135deg, #ffe7de, #fbd0bf, #f8bab0, #f7a69f)
+    no-repeat center center / cover;
+}
 
 @keyframes tilt-shaking {
   0% {
@@ -84,7 +88,9 @@ fieldset {
   border: none;
   background-color: var(--first-color);
   color: black;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
   border-radius: 10px;
   padding: 0.5rem;
   margin: 0.5rem;
