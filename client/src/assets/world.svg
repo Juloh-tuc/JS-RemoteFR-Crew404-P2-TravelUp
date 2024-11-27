@@ -9,6 +9,7 @@
    mapsvg:geoViewBox="-169.110266 83.600842 190.486279 -58.508473"
    viewBox="0 0 1009.6727 665.96301"
    preserveAspectRatio="xMidYMid meet"
+   id="world-map-svg"
    fill="#DBBEA1"
    stroke="#3F292B">
 

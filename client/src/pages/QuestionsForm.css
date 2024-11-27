@@ -51,6 +51,10 @@
   }
 }
 
+body {
+  background: linear-gradient(135deg, #ffe7de, #fbd0bf, #f8bab0, #f7a69f)
+    no-repeat center center / cover;
+}
 h2 {
   margin: 1.5rem;
   color: #00a676;

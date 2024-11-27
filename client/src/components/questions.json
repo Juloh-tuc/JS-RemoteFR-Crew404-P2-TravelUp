@@ -1,15 +1,15 @@
 {
-  "climate": [
-    { "img": "climate-warm.png", "checked": false, "label": "Chaud" },
-    { "img": "climate-cold.png", "checked": false, "label": "Froid" },
-    { "img": "climate-temperate.png", "checked": false, "label": "Tempéré" }
+  "climat": [
+    { "img": "climat-warm.png", "checked": false, "label": "Chaud" },
+    { "img": "climat-cold.png", "checked": false, "label": "Froid" },
+    { "img": "climat-temperate.png", "checked": false, "label": "Tempéré" }
   ],
   "budget": [
     { "img": "budget-high.png", "checked": false, "label": "Élevé" },
     { "img": "budget-medium.png", "checked": false, "label": "Moyen" },
     { "img": "budget-low.png", "checked": false, "label": "Petit" }
   ],
-  "activity": [
+  "activities": [
     { "img": "beach.png", "checked": false, "label": "Plage" },
     { "img": "party.png", "checked": false, "label": "Fête" },
     { "img": "shopping.png", "checked": false, "label": "Shopping" },
