@@ -10,7 +10,6 @@ function NavBar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <>
       {location.pathname === "/" && (

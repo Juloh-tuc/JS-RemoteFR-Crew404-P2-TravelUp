@@ -1,3 +1,4 @@
+/* Section principale */
 .home-container {
   display: flex;
   justify-content: space-between;
@@ -7,6 +8,7 @@
   position: relative;
 }
 
+/* Section gauche */
 .home-left {
   display: flex;
   flex-direction: column;
@@ -19,10 +21,8 @@
 
 .home-left h1 {
   padding: 1rem;
-  padding-bottom: 1rem;
   font-size: 2.5rem;
   margin-bottom: 10px;
-  display: flex;
 }
 
 .home-left p {
@@ -40,12 +40,14 @@
   transition: all 0.3s ease;
 }
 
-.home-right {
+/* Section droite */
+/*.home-right {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 30%;
-}
+}*/
 
 .home-quiz-button {
   display: inline-block;
@@ -58,9 +60,8 @@
   font-size: 1.5rem;
   font-weight: bold;
   border-radius: 10px;
+  margin-bottom: 20px;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .home-quiz-button:hover {
@@ -69,6 +70,22 @@
   color: white;
 }
 
+/* GIF Section */
+.home-gif-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -170px;
+  padding: 2px;
+}
+
+.home-gif {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
 @media (max-width: 1024px) {
   .home-container {
     flex-direction: column;
@@ -99,62 +116,76 @@
     margin-top: 15px;
   }
 
-  .home-right {
+  /* .home-right {
     width: 100%;
-    margin-top: 20px;
-  }
+   
+  }*/
 
   .home-quiz-button {
     font-size: 1.3rem;
     padding: 12px 25px;
   }
-}
 
-@media (max-width: 768px) {
-  .home-container {
-    padding: 10% 5%;
+  .home-gif-container {
+    display: flex;
+    justify-content: center;
+    /*margin-top: 10px;*/
   }
 
-  .home-left h1 {
-    font-size: 2rem;
+  .home-gif {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   }
 
-  .home-left p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 10px;
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 10% 5%;
+    }
+    .responsive-hide {
+      display: none;
+    }
+
+    .home-left p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .home-animation {
+      width: 80%;
+      max-width: 250px;
+      margin-top: 20px;
+    }
+
+    .home-quiz-button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .home-gif-container {
+      max-width: 200px;
+    }
   }
 
-  .home-animation {
-    width: 80%;
-    max-width: 250px;
-    margin-top: 20px;
-  }
+  @media (max-width: 480px) {
+    .home-animation {
+      width: 70%;
+      max-width: 200px;
+      margin-top: 10px;
+    }
 
-  .home-quiz-button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    border-radius: 8px;
-  }
-}
+    .home-quiz-button {
+      font-size: 1rem;
+      padding: 8px 15px;
+    }
 
-@media (max-width: 480px) {
-  .home-left h1 {
-    font-size: 1.8rem;
-  }
-
-  .home-left p {
-    font-size: 0.9rem;
-  }
-
-  .home-animation {
-    width: 70%;
-    max-width: 200px;
-    margin-top: 10px;
-  }
-
-  .home-quiz-button {
-    font-size: 1rem;
-    padding: 8px 15px;
+    .home-gif-container {
+      max-width: 180px;
+      margin-left: 29px;
+      margin-bottom: 0.5px;
+    }
   }
 }
