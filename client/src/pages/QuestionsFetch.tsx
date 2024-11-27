@@ -3,7 +3,6 @@ import "./QuestionsFetch.css";
 import WorldMap from "../components/WorldMap";
 import "../components/WorldMap.css";
 
-// Define the structure of a country
 interface Country {
   id: string;
   climat: {
@@ -26,7 +25,6 @@ interface Country {
   };
 }
 
-// Define question keys
 const questionKeys = [
   "climat",
   "budget",
@@ -36,7 +34,6 @@ const questionKeys = [
   "duration",
 ] as const;
 
-// Image mapping
 const questionsImg = {
   climat: [
     { img: "climat-warm.png" },
@@ -72,7 +69,6 @@ const questionsImg = {
   duration: [{ img: "week.png" }, { img: "weekend.png" }, { img: "weeks.png" }],
 } as const;
 
-// Question labels
 const questionLabels: Record<(typeof questionKeys)[number], string> = {
   climat: "Quel climat préférez-vous ?",
   budget: "Quel budget avez-vous ?",
@@ -97,7 +93,6 @@ const QuestionsFetch = () => {
   const [allCountries, setAllCountries] = useState<Country[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
 
-  // Fetch countries data
   useEffect(() => {
     const fetchAllCountries = async () => {
       try {
@@ -153,7 +148,6 @@ const QuestionsFetch = () => {
     const updatedCriteria = { ...selectedCriteria, [key]: updatedValues };
     setSelectedCriteria(updatedCriteria);
 
-    // Update remaining countries only if the key is part of matching criteria
     if (!["people", "duration"].includes(key)) {
       const updatedRemainingCountries = filterCountries(updatedCriteria);
       setRemainingCountries(updatedRemainingCountries);

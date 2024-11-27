@@ -154,18 +154,15 @@ label[type="label"]:not(:checked) + label {
   animation: notilt-shaking 0.4s ease-in-out;
 }
 
-/* Default styling for the image */
 .option-image {
   display: block;
   transition: transform 0.4s ease-in-out;
 }
 
-/* Apply tilt-shaking animation when the checkbox is checked */
 input[type="checkbox"]:checked + .option-image-wrapper .option-image {
   animation: tilt-shaking 0.4s ease-in-out;
 }
 
-/* Optional: Apply a no-tilt animation when the checkbox is unchecked */
 input[type="checkbox"]:not(:checked) + .option-image-wrapper .option-image {
   animation: notilt-shaking 0.4s ease-in-out;
 }
