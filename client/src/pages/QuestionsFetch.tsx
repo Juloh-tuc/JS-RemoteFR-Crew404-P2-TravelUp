@@ -18,6 +18,12 @@ interface Country {
   environnement: {
     type: string[];
   };
+  people: {
+    type: string[];
+  };
+  duration: {
+    type: string[];
+  };
 }
 
 // Define question keys
@@ -76,7 +82,7 @@ const questionLabels: Record<(typeof questionKeys)[number], string> = {
   duration: "La durée de votre séjour ?",
 };
 
-const QuestionsForm = () => {
+const QuestionsFetch = () => {
   const [selectedCriteria, setSelectedCriteria] = useState<
     Record<string, string[]>
   >({
@@ -95,7 +101,9 @@ const QuestionsForm = () => {
   useEffect(() => {
     const fetchAllCountries = async () => {
       try {
-        const response = await fetch("http://localhost:3310/api/countries");
+        const response = await fetch(
+          "https://api-p2-travelup.vercel.app/countries",
+        );
         const data: Record<string, Country> = await response.json();
         setAllCountries(Object.values(data));
         setRemainingCountries(Object.values(data).map((country) => country.id));
@@ -112,20 +120,19 @@ const QuestionsForm = () => {
       .filter((country) =>
         questionKeys.slice(0, 4).every((key) => {
           const selectedValues = criteria[key] || [];
-          const property = country[key as keyof Country];
+          const property = country[key];
 
           if (selectedValues.length === 0) return true;
 
-          if (
-            property &&
-            typeof property === "object" &&
-            "type" in property &&
-            Array.isArray(property.type)
-          ) {
+          if (property && "type" in property && Array.isArray(property.type)) {
             return selectedValues.some((v) => property.type.includes(v));
           }
 
-          if (property && typeof property === "object" && "range" in property) {
+          if (
+            property &&
+            "range" in property &&
+            Array.isArray(property.range)
+          ) {
             return selectedValues.some((v) => property.range.includes(v));
           }
 
@@ -246,4 +253,4 @@ const QuestionsForm = () => {
   );
 };
 
-export default QuestionsForm;
+export default QuestionsFetch;

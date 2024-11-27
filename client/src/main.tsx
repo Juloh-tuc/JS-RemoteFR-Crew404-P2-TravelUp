@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import QuestionsForm from "./pages/QuestionsForm";
+import QuestionsFetch from "./pages/QuestionsFetch";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/quiz",
-        element: <QuestionsForm />,
+        element: <QuestionsFetch />,
       },
       {
         path: "*",
