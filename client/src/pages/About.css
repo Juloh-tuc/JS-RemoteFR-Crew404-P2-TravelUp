@@ -12,7 +12,7 @@ header {
   margin: auto;
   border-radius: 30px;
   border-radius: 30px;
-  background-color: #ffe7de;
+  margin-top: 25px;
 }
 .aboutpage {
   text-align: center;
@@ -49,6 +49,7 @@ header {
   width: 230px;
   height: 230px;
   border-radius: 110px;
+  filter: drop-shadow(10px 10px 4px black);
 }
 .container_history {
   display: flex;
