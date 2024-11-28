@@ -36,14 +36,14 @@ const questionKeys = [
 
 const questionsImg = {
   climat: [
-    { img: "climat-warm.png" },
     { img: "climat-cold.png" },
     { img: "climat-temperate.png" },
+    { img: "climat-warm.png" },
   ],
   budget: [
-    { img: "budget-high.png" },
-    { img: "budget-medium.png" },
     { img: "budget-low.png" },
+    { img: "budget-medium.png" },
+    { img: "budget-high.png" },
   ],
   activities: [
     { img: "beach.png" },
@@ -62,11 +62,11 @@ const questionsImg = {
   ],
   people: [
     { img: "solo.png" },
-    { img: "family.png" },
-    { img: "couple.png" },
     { img: "friends.png" },
+    { img: "couple.png" },
+    { img: "family.png" },
   ],
-  duration: [{ img: "week.png" }, { img: "weekend.png" }, { img: "weeks.png" }],
+  duration: [{ img: "weekend.png" }, { img: "week.png" }, { img: "weeks.png" }],
 } as const;
 
 const questionLabels: Record<(typeof questionKeys)[number], string> = {
@@ -168,15 +168,15 @@ const QuestionsFetch = () => {
   const currentQuestionKey = questionKeys[currentQuestionIndex];
   const currentOptions =
     currentQuestionKey === "climat"
-      ? ["chaud", "froid", "tempéré"]
+      ? ["froid", "tempéré", "chaud"]
       : currentQuestionKey === "budget"
         ? ["petit", "moyen", "élevé"]
         : currentQuestionKey === "environnement"
           ? ["plage", "montagne", "campagne", "ville"]
           : currentQuestionKey === "people"
-            ? ["solo", "famille", "couple", "amis"]
+            ? ["solo", "ami", "couple", "famille"]
             : currentQuestionKey === "duration"
-              ? ["semaine", "weekend", "semaines"]
+              ? ["weekend", "semaine", "semaines"]
               : [
                   "plage",
                   "fête",
