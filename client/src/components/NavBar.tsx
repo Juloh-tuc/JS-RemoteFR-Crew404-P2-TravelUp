@@ -1,23 +1,31 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "../components/NavBar.css";
 import menuIcon from "../assets/images/menu.png";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <>
       {location.pathname === "/" && (
-        <img
-          className="logo"
-          src={logo}
-          alt="une terre avec un pins rouge au couleur de notre charte"
-        />
+        <a
+          href="https://github.com/GorskiAnthony"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            className="logo"
+            src={logo}
+            alt="une terre avec un pins rouge au couleur de notre charte"
+          />
+        </a>
       )}
       <nav className="navbar">
         <div className="navbar-header">
