@@ -183,6 +183,46 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
   left: 2px;
 }
 
-.paysCorrespondants {
-  display: none;
+.recap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--first-color);
+  padding: 2rem;
+  margin-left: 10rem;
+  margin-right: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.recap-container h2 {
+  font-size: 1.5rem;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.recap-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recap-container li {
+  font-size: var(--normal-font-size);
+  color: #333333;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.pays-titre {
+  color: black;
+  font-weight: bold;
+}
+
+.pays-noms {
+  color: var(--text-color);
+  font-weight: normal;
 }

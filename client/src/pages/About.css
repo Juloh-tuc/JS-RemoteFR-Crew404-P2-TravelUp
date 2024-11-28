@@ -91,7 +91,7 @@ header {
   height: 300px;
   border-radius: 140px;
 }
-h3 {
+.description {
   text-align: center;
   text-decoration: underline;
 }

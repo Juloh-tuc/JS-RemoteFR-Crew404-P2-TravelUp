@@ -64,7 +64,7 @@ const questionsImg = {
   duration: [{ img: "week.png" }, { img: "weekend.png" }, { img: "weeks.png" }],
 };
 
-const QuestionsForm = () => {
+const QuestionsFetch = () => {
   const [selectedCriteria, setSelectedCriteria] = useState<
     Record<string, string[]>
   >({});
@@ -135,8 +135,8 @@ const QuestionsForm = () => {
 
     if (!["people", "duration"].includes(key)) {
       const filteredCountries = filterCountries(updatedCriteria);
-      setRemainingCountries(filteredCountries.map((c) => c.id)); // IDs for the map
-      setRemainingCountryNames(filteredCountries.map((c) => c.name)); // Names for display
+      setRemainingCountries(filteredCountries.map((c) => c.id));
+      setRemainingCountryNames(filteredCountries.map((c) => c.name));
     }
   };
 
@@ -194,10 +194,15 @@ const QuestionsForm = () => {
             ))}
           </ul>
           <h3>
-            Pays correspondants :{" "}
-            {remainingCountryNames.length > 0
-              ? remainingCountryNames.join(", ")
-              : "Aucun"}
+            <span className="pays-titre">Pays correspondants :</span>
+            <br />
+            {remainingCountryNames.length > 0 ? (
+              <span className="pays-noms">
+                {remainingCountryNames.join(", ")}
+              </span>
+            ) : (
+              <span className="pays-noms">Aucun</span>
+            )}
           </h3>
         </div>
       ) : (
@@ -233,14 +238,15 @@ const QuestionsForm = () => {
                 </div>
               </div>
               <div className="validate-container">
-                <button
-                  type="button"
-                  className="validate"
-                  onClick={handlePrevious}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Précédent
-                </button>
+                {currentQuestionIndex > 0 && (
+                  <button
+                    type="button"
+                    className="validate"
+                    onClick={handlePrevious}
+                  >
+                    Précédent
+                  </button>
+                )}
                 <button type="button" className="validate" onClick={handleNext}>
                   {currentQuestionIndex === questionKeys.length - 1
                     ? "Terminer"
@@ -255,4 +261,4 @@ const QuestionsForm = () => {
   );
 };
 
-export default QuestionsForm;
+export default QuestionsFetch;
