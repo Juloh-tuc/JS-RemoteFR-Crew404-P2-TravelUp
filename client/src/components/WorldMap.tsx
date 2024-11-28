@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import world from "../assets/world.svg";
+import "./WorldMap.css";
 
 interface MapProps {
   highlightedCountries: string[];
