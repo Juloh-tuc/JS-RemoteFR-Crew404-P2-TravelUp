@@ -63,7 +63,6 @@ const questionsImg = {
   ],
 
   duration: [{ img: "weekend.png" }, { img: "week.png" }, { img: "weeks.png" }],
-
 };
 
 const QuestionsFetch = () => {
@@ -164,10 +163,7 @@ const QuestionsFetch = () => {
         : currentQuestionKey === "environnement"
           ? ["plage", "montagne", "campagne", "ville"]
           : currentQuestionKey === "people"
-
             ? ["solo", "amis", "couple", "famille"]
-          
-
             : currentQuestionKey === "duration"
               ? ["semaine", "weekend", "semaines"]
               : [
@@ -227,14 +223,12 @@ const QuestionsFetch = () => {
                         }
                       />
                       <div className="option-content">
-
                         <img
                           src={`../../img/${
                             questionsImg[currentQuestionKey]?.[index]?.img ||
                             "placeholder.png"
                           }`}
                           alt={value}
-
                           className="option-image"
                         />
                         <span>{value}</span>
@@ -259,7 +253,6 @@ const QuestionsFetch = () => {
                     : "Suivant"}
                 </button>
               </div>
-
             </div>
           </div>
         </div>

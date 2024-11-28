@@ -69,10 +69,8 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 .form-container,
 .recap-container {
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,7 +147,6 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
   display: flex;
   justify-content: center;
   gap: 1rem;
-
 }
 
 .validate {
@@ -166,7 +163,6 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
   font-weight: bold;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 
 .validate:hover {
   transform: translateY(-2px);
@@ -185,7 +181,6 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
   text-align: center;
   text-decoration: none;
 }
-
 
 .pays-titre {
   color: black;
