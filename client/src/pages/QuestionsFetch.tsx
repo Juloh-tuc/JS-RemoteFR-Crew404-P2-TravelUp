@@ -4,6 +4,7 @@ import "./QuestionsFetch.css";
 
 type Country = {
   id: string;
+  name: string;
   climat?: { type: string[] };
   budget?: { range: string[] };
   environnement?: { type: string[] };
@@ -68,6 +69,9 @@ const QuestionsForm = () => {
     Record<string, string[]>
   >({});
   const [remainingCountries, setRemainingCountries] = useState<string[]>([]);
+  const [remainingCountryNames, setRemainingCountryNames] = useState<string[]>(
+    [],
+  );
   const [allCountries, setAllCountries] = useState<Country[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [showRecap, setShowRecap] = useState(false);
@@ -115,7 +119,7 @@ const QuestionsForm = () => {
           return false;
         }),
       )
-      .map((country) => country.id);
+      .map((country) => ({ id: country.id, name: country.name }));
   };
 
   const handleCriteriaToggle = (key: string, value: string) => {
@@ -130,8 +134,9 @@ const QuestionsForm = () => {
     setSelectedCriteria(updatedCriteria);
 
     if (!["people", "duration"].includes(key)) {
-      const updatedRemainingCountries = filterCountries(updatedCriteria);
-      setRemainingCountries(updatedRemainingCountries);
+      const filteredCountries = filterCountries(updatedCriteria);
+      setRemainingCountries(filteredCountries.map((c) => c.id)); // IDs for the map
+      setRemainingCountryNames(filteredCountries.map((c) => c.name)); // Names for display
     }
   };
 
@@ -190,8 +195,8 @@ const QuestionsForm = () => {
           </ul>
           <h3>
             Pays correspondants :{" "}
-            {remainingCountries.length > 0
-              ? remainingCountries.join(", ")
+            {remainingCountryNames.length > 0
+              ? remainingCountryNames.join(", ")
               : "Aucun"}
           </h3>
         </div>
