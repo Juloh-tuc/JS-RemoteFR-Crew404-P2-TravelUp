@@ -31,14 +31,14 @@ const questionLabels = {
 
 const questionsImg = {
   climat: [
+    { img: "climat-warm.png" },
     { img: "climat-cold.png" },
     { img: "climat-temperate.png" },
-    { img: "climat-warm.png" },
   ],
   budget: [
-    { img: "budget-low.png" },
-    { img: "budget-medium.png" },
     { img: "budget-high.png" },
+    { img: "budget-medium.png" },
+    { img: "budget-low.png" },
   ],
   activities: [
     { img: "beach.png" },
@@ -57,11 +57,13 @@ const questionsImg = {
   ],
   people: [
     { img: "solo.png" },
-    { img: "friends.png" },
-    { img: "couple.png" },
     { img: "family.png" },
+    { img: "couple.png" },
+    { img: "friends.png" },
   ],
+
   duration: [{ img: "weekend.png" }, { img: "week.png" }, { img: "weeks.png" }],
+
 };
 
 const QuestionsFetch = () => {
@@ -156,15 +158,18 @@ const QuestionsFetch = () => {
   const currentQuestionKey = questionKeys[currentQuestionIndex];
   const currentOptions =
     currentQuestionKey === "climat"
-      ? ["froid", "tempéré", "chaud"]
+      ? ["chaud", "froid", "tempéré"]
       : currentQuestionKey === "budget"
         ? ["petit", "moyen", "élevé"]
         : currentQuestionKey === "environnement"
           ? ["plage", "montagne", "campagne", "ville"]
           : currentQuestionKey === "people"
+
             ? ["solo", "amis", "couple", "famille"]
+          
+
             : currentQuestionKey === "duration"
-              ? ["weekend", "semaine", "semaines"]
+              ? ["semaine", "weekend", "semaines"]
               : [
                   "plage",
                   "fête",
@@ -180,6 +185,7 @@ const QuestionsFetch = () => {
       <div className="map-container">
         <WorldMap highlightedCountries={remainingCountries} />
       </div>
+
       {showRecap ? (
         <div className="recap-container">
           <h2>Récapitulatif de vos réponses</h2>
@@ -221,12 +227,14 @@ const QuestionsFetch = () => {
                         }
                       />
                       <div className="option-content">
+
                         <img
                           src={`../../img/${
                             questionsImg[currentQuestionKey]?.[index]?.img ||
                             "placeholder.png"
                           }`}
                           alt={value}
+
                           className="option-image"
                         />
                         <span>{value}</span>
@@ -251,6 +259,7 @@ const QuestionsFetch = () => {
                     : "Suivant"}
                 </button>
               </div>
+
             </div>
           </div>
         </div>
