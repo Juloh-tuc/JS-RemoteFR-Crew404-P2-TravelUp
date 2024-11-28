@@ -60,25 +60,21 @@ body {
   display: flex;
   align-items: flex-start;
   align-items: center;
-  justify-content: center;
+  padding: 20px;
   background: linear-gradient(135deg, #ffe7de, #fbd0bf, #f8bab0, #f7a69f);
-}
-
-.map-container {
-  width: 100%;
-  margin: 1rem auto;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   align-items: center;
   background: var(--first-color);
   padding: 2rem;
+  margin-left: 10rem;
+  margin-right: 5rem;
   border-radius: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 400px;
   width: 100%;
 }
 
@@ -137,41 +133,25 @@ h2 {
 input[type="checkbox"]:checked + .option-content {
   animation: tilt-shaking 0.4s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  border-radius: 20%;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 input[type="checkbox"]:not(:checked) + .option-content .option-image {
   animation: notilt-shaking 0.4s ease-in-out;
 }
 
-input[type="checkbox"]:checked + .option-content .option-image {
-  animation: tilt-shaking 0.4s ease-in-out;
-}
-
-input[type="checkbox"]:not(:checked) + .option-content .option-image {
-  animation: notilt-shaking 0.4s ease-in-out;
-}
-
-.gentle-hover-shake:checked {
-  animation: tilt-shaking 0.25s;
-}
-
-.gentle-tilt-move-shake:checked {
-  animation: tilt-n-move-shaking 0.25s;
+.validate-container {
+  display: flex;
+  justify-content: center;
 }
 
 .validate {
-  grid-column: span 3;
-  padding: 0.5rem 1.2rem;
-  background-color: #00a676;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 20px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  margin: 20px 10px 0;
   width: 5rem;
   height: 1.5rem;
   background-color: #ffd19a;
@@ -186,10 +166,6 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-}
-
-.button-53:focus {
-  outline: 0;
 }
 
 .validate:after {

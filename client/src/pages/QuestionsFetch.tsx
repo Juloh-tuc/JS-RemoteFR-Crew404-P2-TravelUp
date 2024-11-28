@@ -192,63 +192,61 @@ const QuestionsFetch = () => {
       <div className="map-container">
         <WorldMap highlightedCountries={remainingCountries} />
       </div>
-      <div className="map-container">
-        <div className="form-container">
-          <div className="checkbox-container">
-            <div className="form">
-              <div className="fieldset">
-                <h2>{questionLabels[currentQuestionKey]}</h2>
-                <div className="options-container">
-                  {currentOptions.map((value, index) => (
-                    <label key={value} className="option-label">
-                      <input
-                        type="checkbox"
-                        onChange={() =>
-                          handleCriteriaToggle(currentQuestionKey, value)
-                        }
-                      />
-                      <div className="option-content">
-                        <span className="gentle-hover-shake">
-                          <img
-                            src={`../../img/${
-                              questionsImg[currentQuestionKey]?.[index]?.img ||
-                              "placeholder.png"
-                            }`}
-                            alt={value}
-                            className="option-image gentle-tilt-move-shake"
-                          />
-                        </span>
-                        <span>{value}</span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-                <p className="paysCorrespondants">
-                  Pays correspondants :{" "}
-                  {persistedCountries.length > 0
-                    ? persistedCountries.join(", ")
-                    : "Aucun"}
-                </p>
+      <div className="form-container">
+        <div className="checkbox-container">
+          <div className="form">
+            <div className="fieldset">
+              <h2>{questionLabels[currentQuestionKey]}</h2>
+              <div className="options-container">
+                {currentOptions.map((value, index) => (
+                  <label key={value} className="option-label">
+                    <input
+                      type="checkbox"
+                      onChange={() =>
+                        handleCriteriaToggle(currentQuestionKey, value)
+                      }
+                    />
+                    <div className="option-content">
+                      <span className="gentle-hover-shake">
+                        <img
+                          src={`../../img/${
+                            questionsImg[currentQuestionKey]?.[index]?.img ||
+                            "placeholder.png"
+                          }`}
+                          alt={value}
+                          className="option-image gentle-tilt-move-shake"
+                        />
+                      </span>
+                      <span>{value}</span>
+                    </div>
+                  </label>
+                ))}
               </div>
+              <p className="paysCorrespondants">
+                Pays correspondants :{" "}
+                {persistedCountries.length > 0
+                  ? persistedCountries.join(", ")
+                  : "Aucun"}
+              </p>
+            </div>
 
-              <div style={{ marginTop: "20px" }}>
-                <button
-                  className="validate"
-                  type="button"
-                  onClick={handlePrevious}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Précédent
-                </button>
-                <button
-                  className="validate"
-                  type="button"
-                  onClick={handleNext}
-                  disabled={currentQuestionIndex === questionKeys.length - 1}
-                >
-                  Suivant
-                </button>
-              </div>
+            <div className="validate-container">
+              <button
+                className="validate"
+                type="button"
+                onClick={handlePrevious}
+                disabled={currentQuestionIndex === 0}
+              >
+                Précédent
+              </button>
+              <button
+                className="validate"
+                type="button"
+                onClick={handleNext}
+                disabled={currentQuestionIndex === questionKeys.length - 1}
+              >
+                Suivant
+              </button>
             </div>
           </div>
         </div>
