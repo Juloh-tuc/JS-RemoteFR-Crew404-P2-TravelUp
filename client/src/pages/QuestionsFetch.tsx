@@ -36,14 +36,14 @@ const questionKeys = [
 
 const questionsImg = {
   climat: [
+    { img: "climat-warm.png" },
     { img: "climat-cold.png" },
     { img: "climat-temperate.png" },
-    { img: "climat-warm.png" },
   ],
   budget: [
-    { img: "budget-low.png" },
-    { img: "budget-medium.png" },
     { img: "budget-high.png" },
+    { img: "budget-medium.png" },
+    { img: "budget-low.png" },
   ],
   activities: [
     { img: "beach.png" },
@@ -62,11 +62,11 @@ const questionsImg = {
   ],
   people: [
     { img: "solo.png" },
-    { img: "friends.png" },
-    { img: "couple.png" },
     { img: "family.png" },
+    { img: "couple.png" },
+    { img: "friends.png" },
   ],
-  duration: [{ img: "weekend.png" }, { img: "week.png" }, { img: "weeks.png" }],
+  duration: [{ img: "week.png" }, { img: "weekend.png" }, { img: "weeks.png" }],
 } as const;
 
 const questionLabels: Record<(typeof questionKeys)[number], string> = {
@@ -97,7 +97,7 @@ const QuestionsFetch = () => {
     const fetchAllCountries = async () => {
       try {
         const response = await fetch(
-          "https://api-p2-travelup.vercel.app/countries",
+          "https://api-p2-travelup.vercel.app/countries"
         );
         const data: Record<string, Country> = await response.json();
         setAllCountries(Object.values(data));
@@ -132,7 +132,7 @@ const QuestionsFetch = () => {
           }
 
           return false;
-        }),
+        })
       )
       .map((country) => country.id);
   };
@@ -157,7 +157,7 @@ const QuestionsFetch = () => {
 
   const handleNext = () => {
     setCurrentQuestionIndex((prev) =>
-      prev < questionKeys.length - 1 ? prev + 1 : prev,
+      prev < questionKeys.length - 1 ? prev + 1 : prev
     );
   };
 
@@ -168,87 +168,85 @@ const QuestionsFetch = () => {
   const currentQuestionKey = questionKeys[currentQuestionIndex];
   const currentOptions =
     currentQuestionKey === "climat"
-      ? ["froid", "tempéré", "chaud"]
+      ? ["chaud", "froid", "tempéré"]
       : currentQuestionKey === "budget"
-        ? ["petit", "moyen", "élevé"]
-        : currentQuestionKey === "environnement"
-          ? ["plage", "montagne", "campagne", "ville"]
-          : currentQuestionKey === "people"
-            ? ["solo", "ami", "couple", "famille"]
-            : currentQuestionKey === "duration"
-              ? ["weekend", "semaine", "semaines"]
-              : [
-                  "plage",
-                  "fête",
-                  "shopping",
-                  "randonnées",
-                  "visite",
-                  "culinaire",
-                  "détente",
-                ];
+      ? ["petit", "moyen", "élevé"]
+      : currentQuestionKey === "environnement"
+      ? ["plage", "montagne", "campagne", "ville"]
+      : currentQuestionKey === "people"
+      ? ["solo", "famille", "couple", "amis"]
+      : currentQuestionKey === "duration"
+      ? ["semaine", "weekend", "semaines"]
+      : [
+          "plage",
+          "fête",
+          "shopping",
+          "randonnées",
+          "visite",
+          "culinaire",
+          "détente",
+        ];
 
   return (
     <div className="questions-form-container">
       <div className="map-container">
         <WorldMap highlightedCountries={remainingCountries} />
       </div>
-      <div className="map-container">
-        <div className="form-container">
-          <div className="checkbox-container">
-            <div className="form">
-              <div className="fieldset">
-                <h2>{questionLabels[currentQuestionKey]}</h2>
-                <div className="options-container">
-                  {currentOptions.map((value, index) => (
-                    <label key={value} className="option-label">
-                      <input
-                        type="checkbox"
-                        onChange={() =>
-                          handleCriteriaToggle(currentQuestionKey, value)
-                        }
-                      />
-                      <div className="option-content">
-                        <span className="gentle-hover-shake">
-                          <img
-                            src={`../../img/${
-                              questionsImg[currentQuestionKey]?.[index]?.img ||
-                              "placeholder.png"
-                            }`}
-                            alt={value}
-                            className="option-image gentle-tilt-move-shake"
-                          />
-                        </span>
-                        <span>{value}</span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
-                <p className="paysCorrespondants">
-                  Pays correspondants :{" "}
-                  {persistedCountries.length > 0
-                    ? persistedCountries.join(", ")
-                    : "Aucun"}
-                </p>
+      <div className="form-container">
+        <div className="checkbox-container">
+          <div className="form">
+            <div className="fieldset">
+              <h2>{questionLabels[currentQuestionKey]}</h2>
+              <div className="options-container">
+                {currentOptions.map((value, index) => (
+                  <label key={value} className="option-label">
+                    <input
+                      type="checkbox"
+                      onChange={() =>
+                        handleCriteriaToggle(currentQuestionKey, value)
+                      }
+                    />
+                    <div className="option-content">
+                      <span className="gentle-hover-shake">
+                        <img
+                          src={`../../img/${
+                            questionsImg[currentQuestionKey]?.[index]?.img ||
+                            "placeholder.png"
+                          }`}
+                          alt={value}
+                          className="option-image gentle-tilt-move-shake"
+                        />
+                      </span>
+                      <span>{value}</span>
+                    </div>
+                  </label>
+                ))}
               </div>
+              <p className="paysCorrespondants">
+                Pays correspondants :{" "}
+                {persistedCountries.length > 0
+                  ? persistedCountries.join(", ")
+                  : "Aucun"}
+              </p>
+            </div>
 
-              <div style={{ marginTop: "20px" }}>
-                <button
-                  className="validate"
-                  type="button"
-                  onClick={handlePrevious}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Précédent
-                </button>
-                <button
-                  className="validate"
-                  type="button"
-                  onClick={handleNext}
-                  disabled={currentQuestionIndex === questionKeys.length - 1}
-                >
-                  Suivant
-                </button>
-              </div>
+            <div className="validate-container">
+              <button
+                className="validate"
+                type="button"
+                onClick={handlePrevious}
+                disabled={currentQuestionIndex === 0}
+              >
+                Précédent
+              </button>
+              <button
+                className="validate"
+                type="button"
+                onClick={handleNext}
+                disabled={currentQuestionIndex === questionKeys.length - 1}
+              >
+                Suivant
+              </button>
             </div>
           </div>
         </div>
