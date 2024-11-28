@@ -97,7 +97,7 @@ const QuestionsFetch = () => {
     const fetchAllCountries = async () => {
       try {
         const response = await fetch(
-          "https://api-p2-travelup.vercel.app/countries"
+          "https://api-p2-travelup.vercel.app/countries",
         );
         const data: Record<string, Country> = await response.json();
         setAllCountries(Object.values(data));
@@ -132,7 +132,7 @@ const QuestionsFetch = () => {
           }
 
           return false;
-        })
+        }),
       )
       .map((country) => country.id);
   };
@@ -157,7 +157,7 @@ const QuestionsFetch = () => {
 
   const handleNext = () => {
     setCurrentQuestionIndex((prev) =>
-      prev < questionKeys.length - 1 ? prev + 1 : prev
+      prev < questionKeys.length - 1 ? prev + 1 : prev,
     );
   };
 
@@ -170,22 +170,22 @@ const QuestionsFetch = () => {
     currentQuestionKey === "climat"
       ? ["chaud", "froid", "tempéré"]
       : currentQuestionKey === "budget"
-      ? ["petit", "moyen", "élevé"]
-      : currentQuestionKey === "environnement"
-      ? ["plage", "montagne", "campagne", "ville"]
-      : currentQuestionKey === "people"
-      ? ["solo", "famille", "couple", "amis"]
-      : currentQuestionKey === "duration"
-      ? ["semaine", "weekend", "semaines"]
-      : [
-          "plage",
-          "fête",
-          "shopping",
-          "randonnées",
-          "visite",
-          "culinaire",
-          "détente",
-        ];
+        ? ["petit", "moyen", "élevé"]
+        : currentQuestionKey === "environnement"
+          ? ["plage", "montagne", "campagne", "ville"]
+          : currentQuestionKey === "people"
+            ? ["solo", "famille", "couple", "amis"]
+            : currentQuestionKey === "duration"
+              ? ["semaine", "weekend", "semaines"]
+              : [
+                  "plage",
+                  "fête",
+                  "shopping",
+                  "randonnées",
+                  "visite",
+                  "culinaire",
+                  "détente",
+                ];
 
   return (
     <div className="questions-form-container">
