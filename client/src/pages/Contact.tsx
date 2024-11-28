@@ -112,13 +112,13 @@ function Contact() {
         backgroundImage: spainImage,
       },
       suisse: {
-        backgroundColor: "pink",
+        backgroundColor: "#242B79",
         id: "CH",
         number: 15,
         backgroundImage: suisseImage,
       },
       tanzanie: {
-        backgroundColor: "pink",
+        backgroundColor: "#958950",
         id: "TZ",
         number: 16,
         backgroundImage: tanzanieImage,
