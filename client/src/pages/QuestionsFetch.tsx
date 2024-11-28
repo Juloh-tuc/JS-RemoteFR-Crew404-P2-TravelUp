@@ -1,15 +1,29 @@
 import { useEffect, useState } from "react";
-import WorldMap from "../components/WorldMap";
 import "./QuestionsFetch.css";
+import WorldMap from "../components/WorldMap";
+import "../components/WorldMap.css";
 
-type Country = {
+interface Country {
   id: string;
-  name: string;
-  climat?: { type: string[] };
-  budget?: { range: string[] };
-  environnement?: { type: string[] };
-  activities?: { type: string[] };
-};
+  climat: {
+    type: string[];
+  };
+  budget: {
+    range: string[];
+  };
+  activities: {
+    type: string[];
+  };
+  environnement: {
+    type: string[];
+  };
+  people: {
+    type: string[];
+  };
+  duration: {
+    type: string[];
+  };
+}
 
 const questionKeys = [
   "climat",
@@ -19,15 +33,6 @@ const questionKeys = [
   "people",
   "duration",
 ] as const;
-
-const questionLabels = {
-  climat: "Quel climat préférez-vous ?",
-  budget: "Quel budget avez-vous ?",
-  environnement: "Quel environnement préférez-vous ?",
-  activities: "Quelles activités préférez-vous ?",
-  people: "Vous voyagez ?",
-  duration: "La durée de votre séjour ?",
-} as const;
 
 const questionsImg = {
   climat: [
@@ -62,31 +67,47 @@ const questionsImg = {
     { img: "friends.png" },
   ],
   duration: [{ img: "week.png" }, { img: "weekend.png" }, { img: "weeks.png" }],
+} as const;
+
+const questionLabels: Record<(typeof questionKeys)[number], string> = {
+  climat: "Quel climat préférez-vous ?",
+  budget: "Quel budget avez-vous ?",
+  environnement: "Quel environnement préférez-vous ?",
+  activities: "Quelles activités préférez-vous ?",
+  people: "Vous voyagez ?",
+  duration: "La durée de votre séjour ?",
 };
 
-const QuestionsForm = () => {
+const QuestionsFetch = () => {
   const [selectedCriteria, setSelectedCriteria] = useState<
     Record<string, string[]>
-  >({});
+  >({
+    climat: [],
+    budget: [],
+    activities: [],
+    environnement: [],
+  });
+
   const [remainingCountries, setRemainingCountries] = useState<string[]>([]);
-  const [remainingCountryNames, setRemainingCountryNames] = useState<string[]>(
-    [],
-  );
+  const [persistedCountries, setPersistedCountries] = useState<string[]>([]);
   const [allCountries, setAllCountries] = useState<Country[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
-  const [showRecap, setShowRecap] = useState(false);
 
   useEffect(() => {
-    const fetchCountries = async () => {
-      const response = await fetch(
-        "https://api-p2-travelup.vercel.app/countries",
-      );
-      const data: Record<string, Country> = await response.json();
-      setAllCountries(Object.values(data));
-      setRemainingCountries(Object.keys(data));
+    const fetchAllCountries = async () => {
+      try {
+        const response = await fetch(
+          "https://api-p2-travelup.vercel.app/countries",
+        );
+        const data: Record<string, Country> = await response.json();
+        setAllCountries(Object.values(data));
+        setRemainingCountries(Object.values(data).map((country) => country.id));
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
     };
 
-    fetchCountries();
+    fetchAllCountries();
   }, []);
 
   const filterCountries = (criteria: Record<string, string[]>) => {
@@ -94,22 +115,16 @@ const QuestionsForm = () => {
       .filter((country) =>
         questionKeys.slice(0, 4).every((key) => {
           const selectedValues = criteria[key] || [];
-          const property = country[key as keyof Country];
+          const property = country[key];
 
           if (selectedValues.length === 0) return true;
 
-          if (
-            typeof property === "object" &&
-            property !== null &&
-            "type" in property &&
-            Array.isArray(property.type)
-          ) {
+          if (property && "type" in property && Array.isArray(property.type)) {
             return selectedValues.some((v) => property.type.includes(v));
           }
 
           if (
-            typeof property === "object" &&
-            property !== null &&
+            property &&
             "range" in property &&
             Array.isArray(property.range)
           ) {
@@ -119,10 +134,10 @@ const QuestionsForm = () => {
           return false;
         }),
       )
-      .map((country) => ({ id: country.id, name: country.name }));
+      .map((country) => country.id);
   };
 
-  const handleCriteriaToggle = (key: string, value: string) => {
+  const handleCriteriaToggle = (key: string, value: string): void => {
     const currentValues = selectedCriteria[key] || [];
     const isSelected = currentValues.includes(value);
 
@@ -134,23 +149,20 @@ const QuestionsForm = () => {
     setSelectedCriteria(updatedCriteria);
 
     if (!["people", "duration"].includes(key)) {
-      const filteredCountries = filterCountries(updatedCriteria);
-      setRemainingCountries(filteredCountries.map((c) => c.id)); // IDs for the map
-      setRemainingCountryNames(filteredCountries.map((c) => c.name)); // Names for display
+      const updatedRemainingCountries = filterCountries(updatedCriteria);
+      setRemainingCountries(updatedRemainingCountries);
+      setPersistedCountries(updatedRemainingCountries); // Persist the latest matching countries
     }
   };
 
   const handleNext = () => {
-    if (currentQuestionIndex === questionKeys.length - 1) {
-      setShowRecap(true);
-    } else {
-      setCurrentQuestionIndex((prev) => prev + 1);
-    }
+    setCurrentQuestionIndex((prev) =>
+      prev < questionKeys.length - 1 ? prev + 1 : prev,
+    );
   };
 
   const handlePrevious = () => {
     setCurrentQuestionIndex((prev) => (prev > 0 ? prev - 1 : prev));
-    setShowRecap(false);
   };
 
   const currentQuestionKey = questionKeys[currentQuestionIndex];
@@ -180,79 +192,67 @@ const QuestionsForm = () => {
       <div className="map-container">
         <WorldMap highlightedCountries={remainingCountries} />
       </div>
-      {showRecap ? (
-        <div className="recap-container">
-          <h2>Récapitulatif de vos réponses</h2>
-          <ul>
-            {Object.entries(selectedCriteria).map(([key, values]) => (
-              <li key={key}>
-                <strong>
-                  {questionLabels[key as keyof typeof questionLabels]}:
-                </strong>{" "}
-                {values.join(", ")}
-              </li>
-            ))}
-          </ul>
-          <h3>
-            Pays correspondants :{" "}
-            {remainingCountryNames.length > 0
-              ? remainingCountryNames.join(", ")
-              : "Aucun"}
-          </h3>
-        </div>
-      ) : (
-        <div className="form-container">
-          <div className="checkbox-container">
-            <div className="form">
-              <div className="fieldset">
-                <h2>{questionLabels[currentQuestionKey]}</h2>
-                <div className="options-container">
-                  {currentOptions.map((value, index) => (
-                    <label key={value} className="option-label">
-                      <input
-                        type="checkbox"
-                        onChange={() =>
-                          handleCriteriaToggle(currentQuestionKey, value)
-                        }
-                      />
-                      <div className="option-content">
-                        <span className="gentle-hover-shake">
-                          <img
-                            src={`../../img/${
-                              questionsImg[currentQuestionKey]?.[index]?.img ||
-                              "placeholder.png"
-                            }`}
-                            alt={value}
-                            className="option-image gentle-tilt-move-shake"
-                          />
-                        </span>
-                        <span>{value}</span>
-                      </div>
-                    </label>
-                  ))}
-                </div>
+      <div className="form-container">
+        <div className="checkbox-container">
+          <div className="form">
+            <div className="fieldset">
+              <h2>{questionLabels[currentQuestionKey]}</h2>
+              <div className="options-container">
+                {currentOptions.map((value, index) => (
+                  <label key={value} className="option-label">
+                    <input
+                      type="checkbox"
+                      onChange={() =>
+                        handleCriteriaToggle(currentQuestionKey, value)
+                      }
+                    />
+                    <div className="option-content">
+                      <span className="gentle-hover-shake">
+                        <img
+                          src={`../../img/${
+                            questionsImg[currentQuestionKey]?.[index]?.img ||
+                            "placeholder.png"
+                          }`}
+                          alt={value}
+                          className="option-image gentle-tilt-move-shake"
+                        />
+                      </span>
+                      <span>{value}</span>
+                    </div>
+                  </label>
+                ))}
               </div>
-              <div className="validate-container">
-                <button
-                  type="button"
-                  className="validate"
-                  onClick={handlePrevious}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  Précédent
-                </button>
-                <button type="button" className="validate" onClick={handleNext}>
-                  {currentQuestionIndex === questionKeys.length - 1
-                    ? "Terminer"
-                    : "Suivant"}
-                </button>
-              </div>
+              <p className="paysCorrespondants">
+                Pays correspondants :{" "}
+                {persistedCountries.length > 0
+                  ? persistedCountries.join(", ")
+                  : "Aucun"}
+              </p>
+            </div>
+
+            <div className="validate-container">
+              <button
+                className="validate"
+                type="button"
+                onClick={handlePrevious}
+                disabled={currentQuestionIndex === 0}
+              >
+                Précédent
+              </button>
+              <button
+                className="validate"
+                type="button"
+                onClick={handleNext}
+                disabled={currentQuestionIndex === questionKeys.length - 1}
+              >
+                Suivant
+              </button>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
 
-export default QuestionsForm;
+export default QuestionsFetch;
