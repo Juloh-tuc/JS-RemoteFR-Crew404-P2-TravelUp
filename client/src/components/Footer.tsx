@@ -9,10 +9,22 @@ function Footer() {
     <section>
       <footer>
         <div className="container_icon">
-          <img src={instagram} alt="icone instagram" className="social_icon" />
-          <img src={facebook} alt="icone facebook" className="social_icon" />
-          <img src={linkedin} alt="icone linkedin" className="social_icon" />
-          <img src={twitter} alt="icone twitter" className="social_icon" />
+          <a href="_">
+            <img
+              src={instagram}
+              alt="icone instagram"
+              className="social_icon"
+            />
+          </a>
+          <a href="_">
+            <img src={facebook} alt="icone facebook" className="social_icon" />
+          </a>
+          <a href="_">
+            <img src={linkedin} alt="icone linkedin" className="social_icon" />
+          </a>
+          <a href="_">
+            <img src={twitter} alt="icone twitter" className="social_icon" />
+          </a>
         </div>
         <p className="creators">Travel up@2024</p>
       </footer>
