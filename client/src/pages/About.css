@@ -84,7 +84,8 @@ header {
   height: 300px;
   border-radius: 140px;
 }
-.description {
+
+.TitreAbout {
   text-align: center;
   text-decoration: underline;
 }
