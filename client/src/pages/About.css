@@ -33,7 +33,7 @@ header {
 }
 .mission {
   border: 1px solid black;
-  width: 230px;
+  width: 250px;
   height: 300px;
   text-align: start;
   border-radius: 40px;
@@ -50,6 +50,7 @@ header {
   justify-content: center;
   gap: 90px;
   margin-top: 20px;
+  font-size: 0.95rem;
 }
 .avatar {
   width: 200px;
@@ -63,7 +64,6 @@ header {
 }
 .container_photo {
   display: flex;
-
   gap: 10px;
 }
 .container_equipe {
@@ -71,6 +71,7 @@ header {
   gap: 10px;
   margin-top: 30px;
   margin-left: 50px;
+  font-size: 0.95rem;
 }
 .container_mission {
   display: flex;
@@ -78,6 +79,7 @@ header {
   margin-bottom: 60px;
   margin-right: 50px;
   gap: 30px;
+  font-size: 0.95rem;
 }
 .mission_photo {
   width: 300px;
@@ -118,5 +120,23 @@ figcaption {
   .team {
     margin-bottom: 20px;
     margin-left: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container_equipe {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-size: 0.9rem;
+  }
+  .container_mission {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+    margin-right: 50px;
+    gap: 30px;
+    font-size: 0.9rem;
   }
 }

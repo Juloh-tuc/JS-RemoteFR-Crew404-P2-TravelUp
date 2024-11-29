@@ -69,7 +69,7 @@ function About() {
             fonction des envies de l'utilisateur à travers un questionnaire. Ce
             concept vient remplacer la méthode traditionnelle qui consiste à
             choisir par soi-même son lieu de vacances. Cependant, nous allons
-            continuer de travailler afin de toujours améliorer l'experiences des
+            continuer de travailler afin de toujours améliorer l'experience des
             utilisateurs du site.
           </p>
         </section>
