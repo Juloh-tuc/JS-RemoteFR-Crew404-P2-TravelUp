@@ -60,13 +60,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding: 2rem;
   gap: 2rem;
-
-  background: linear-gradient(135deg, #ffe7de, #fbd0bf, #f8bab0, #f7a69f);
   border-radius: 1rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .form-container,
@@ -76,21 +72,18 @@ body {
   align-items: center;
   background: var(--first-color);
   padding: 2rem;
-  margin-left: 10rem;
-  margin-right: 5rem;
   border-radius: 1rem;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-
-  max-width: 500px;
-
   width: 100%;
+  height: 80%;
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: var(--h2-font-size);
-  color: var(--body-color);
+  font-size: 1.1rem;
+  color: #19ad68;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .options-container {
@@ -122,8 +115,8 @@ h2 {
 }
 
 .option-image {
-  width: 70px;
-  height: 70px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
@@ -133,7 +126,6 @@ input[type="checkbox"]:checked + .option-content {
   animation: tilt-shaking 0.4s ease-in-out;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
   /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);*/
   background: var(--text-color);
   padding: 0.5rem;
@@ -150,6 +142,7 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
 }
 
 .validate {
+  margin-top: 2em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -175,8 +168,7 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
 }
 
 .recap-container li {
-  font-size: var(--normal-font-size);
-  /*color: #333;*/
+  font-size: 0.7rem;
   margin-bottom: 0.5rem;
   text-align: center;
   text-decoration: none;
@@ -185,11 +177,18 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
 .pays-titre {
   color: black;
   font-weight: bold;
+  font-size: 0.7rem;
 }
 
 .pays-noms {
   color: var(--text-color);
   text-decoration: none;
+  font-size: 0.7rem;
+}
+
+.map-container {
+  width: 120%;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -204,6 +203,70 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
     max-width: 45%;
   }
   .pays-noms {
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--first-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 27%;
+    max-height: 27%;
+    width: 100%;
+  }
+
+  .recap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--first-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+    max-height: 30%;
+    width: 100%;
+  }
+
+  .map-container {
+    margin-left: 4rem;
+  }
+
+  .option-image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: #19ad68;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .pays-titre {
+    color: black;
+    font-weight: bold;
+    padding: 6rem;
+    font-size: 1.5rem;
+  }
+
+  .pays-noms {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  .recap-container li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
     text-decoration: none;
   }
 }

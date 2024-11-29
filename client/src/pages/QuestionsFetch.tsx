@@ -31,14 +31,14 @@ const questionLabels = {
 
 const questionsImg = {
   climat: [
-    { img: "climat-warm.png" },
     { img: "climat-cold.png" },
     { img: "climat-temperate.png" },
+    { img: "climat-warm.png" },
   ],
   budget: [
-    { img: "budget-high.png" },
-    { img: "budget-medium.png" },
     { img: "budget-low.png" },
+    { img: "budget-medium.png" },
+    { img: "budget-high.png" },
   ],
   activities: [
     { img: "beach.png" },
@@ -57,11 +57,10 @@ const questionsImg = {
   ],
   people: [
     { img: "solo.png" },
-    { img: "family.png" },
-    { img: "couple.png" },
     { img: "friends.png" },
+    { img: "couple.png" },
+    { img: "family.png" },
   ],
-
   duration: [{ img: "weekend.png" }, { img: "week.png" }, { img: "weeks.png" }],
 };
 
@@ -157,7 +156,7 @@ const QuestionsFetch = () => {
   const currentQuestionKey = questionKeys[currentQuestionIndex];
   const currentOptions =
     currentQuestionKey === "climat"
-      ? ["chaud", "froid", "tempéré"]
+      ? ["froid", "tempéré", "chaud"]
       : currentQuestionKey === "budget"
         ? ["petit", "moyen", "élevé"]
         : currentQuestionKey === "environnement"
@@ -165,7 +164,7 @@ const QuestionsFetch = () => {
           : currentQuestionKey === "people"
             ? ["solo", "amis", "couple", "famille"]
             : currentQuestionKey === "duration"
-              ? ["semaine", "weekend", "semaines"]
+              ? ["weekend", "semaine", "semaines"]
               : [
                   "plage",
                   "fête",
@@ -181,7 +180,6 @@ const QuestionsFetch = () => {
       <div className="map-container">
         <WorldMap highlightedCountries={remainingCountries} />
       </div>
-
       {showRecap ? (
         <div className="recap-container">
           <h2>Récapitulatif de vos réponses</h2>
