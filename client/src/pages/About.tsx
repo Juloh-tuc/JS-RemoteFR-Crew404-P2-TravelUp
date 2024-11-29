@@ -14,7 +14,6 @@ function About() {
       </header>
       <div className="container_history">
         <section className="history">
-
           <h3 className="TitreAbout">Notre histoire</h3>
 
           <p>
@@ -33,7 +32,6 @@ function About() {
       </div>
       <div className="container_equipe">
         <section className="team">
-
           <h3 className="TitreAbout">L'équipe</h3>
 
           <p>
@@ -64,7 +62,6 @@ function About() {
       </div>
       <div className="container_mission">
         <section className="mission">
-
           <h3 className="TitreAbout">Notre mission</h3>
 
           <p>

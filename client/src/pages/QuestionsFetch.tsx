@@ -138,7 +138,6 @@ const QuestionsFetch = () => {
       const filteredCountries = filterCountries(updatedCriteria);
       setRemainingCountries(filteredCountries.map((c) => c.id));
       setRemainingCountryNames(filteredCountries.map((c) => c.name));
-
     }
   };
 

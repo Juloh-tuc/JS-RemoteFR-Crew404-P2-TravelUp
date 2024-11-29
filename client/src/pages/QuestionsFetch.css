@@ -192,7 +192,6 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
   text-decoration: none;
 }
 
-
 @media (min-width: 768px) {
   .questions-form-container {
     flex-direction: row;
@@ -207,5 +206,4 @@ input[type="checkbox"]:not(:checked) + .option-content .option-image {
   .pays-noms {
     text-decoration: none;
   }
-
 }
