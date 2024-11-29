@@ -14,7 +14,9 @@ function About() {
       </header>
       <div className="container_history">
         <section className="history">
-          <h3 className="description">Notre histoire</h3>
+
+          <h3 className="TitreAbout">Notre histoire</h3>
+
           <p>
             L'idée du site "Travel Up" est née de quatre étudiants qui sont en
             formation à la Wild Code School.C'est pendant le projet deux que
@@ -31,7 +33,9 @@ function About() {
       </div>
       <div className="container_equipe">
         <section className="team">
-          <h3 className="description">L'équipe</h3>
+
+          <h3 className="TitreAbout">L'équipe</h3>
+
           <p>
             L'équipe est constituée de Charles, Camille, Julie et Frank Sena qui
             sont en reconversion professionnelle. Nous sommes tous motivés pour
@@ -60,7 +64,9 @@ function About() {
       </div>
       <div className="container_mission">
         <section className="mission">
-          <h3 className="description">Notre mission</h3>
+
+          <h3 className="TitreAbout">Notre mission</h3>
+
           <p>
             L'objectif de ce site, c'est de vous proposer des destinations en
             fonction des envies de l'utilisateur à travers un questionnaire. Ce

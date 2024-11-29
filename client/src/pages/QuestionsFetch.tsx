@@ -61,7 +61,8 @@ const questionsImg = {
     { img: "couple.png" },
     { img: "friends.png" },
   ],
-  duration: [{ img: "week.png" }, { img: "weekend.png" }, { img: "weeks.png" }],
+
+  duration: [{ img: "weekend.png" }, { img: "week.png" }, { img: "weeks.png" }],
 };
 
 const QuestionsFetch = () => {
@@ -137,6 +138,7 @@ const QuestionsFetch = () => {
       const filteredCountries = filterCountries(updatedCriteria);
       setRemainingCountries(filteredCountries.map((c) => c.id));
       setRemainingCountryNames(filteredCountries.map((c) => c.name));
+
     }
   };
 
@@ -162,7 +164,7 @@ const QuestionsFetch = () => {
         : currentQuestionKey === "environnement"
           ? ["plage", "montagne", "campagne", "ville"]
           : currentQuestionKey === "people"
-            ? ["solo", "famille", "couple", "amis"]
+            ? ["solo", "amis", "couple", "famille"]
             : currentQuestionKey === "duration"
               ? ["semaine", "weekend", "semaines"]
               : [
@@ -180,6 +182,7 @@ const QuestionsFetch = () => {
       <div className="map-container">
         <WorldMap highlightedCountries={remainingCountries} />
       </div>
+
       {showRecap ? (
         <div className="recap-container">
           <h2>Récapitulatif de vos réponses</h2>
@@ -221,16 +224,14 @@ const QuestionsFetch = () => {
                         }
                       />
                       <div className="option-content">
-                        <span className="gentle-hover-shake">
-                          <img
-                            src={`../../img/${
-                              questionsImg[currentQuestionKey]?.[index]?.img ||
-                              "placeholder.png"
-                            }`}
-                            alt={value}
-                            className="option-image gentle-tilt-move-shake"
-                          />
-                        </span>
+                        <img
+                          src={`../../img/${
+                            questionsImg[currentQuestionKey]?.[index]?.img ||
+                            "placeholder.png"
+                          }`}
+                          alt={value}
+                          className="option-image"
+                        />
                         <span>{value}</span>
                       </div>
                     </label>
