@@ -29,7 +29,7 @@ footer {
 }
 
 footer {
-  margin-top: 0.5vh;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
